@@ -1,5 +1,5 @@
 #pragma once
-#include "Rendering/Core/IRendererProvider.h"
+#include "Crymium/Rendering/Core/IRendererProvider.h"
 
 namespace Crymium::Rendering
 {
@@ -8,13 +8,13 @@ namespace Crymium::Rendering
 		public IRendererProvider
 	{
 	public:
-		__declspec(dllexport) RendererProvider() = default;
+		RendererProvider() = default;
 
-		__declspec(dllexport) IRenderer* Get() override;
+		IRenderer* Get() override;
 
-		__declspec(dllexport) int GetRendererWidth() override;
+		int GetRendererWidth() override;
 
-		__declspec(dllexport) int GetRendererHeight() override;
+		int GetRendererHeight() override;
 	};
 }
 

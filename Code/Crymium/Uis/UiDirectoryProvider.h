@@ -7,11 +7,11 @@ namespace Crymium::Uis
 		: public IUiDirectoryProvider
 	{
 	public:
-		__declspec(dllexport) UiDirectoryProvider(
+		UiDirectoryProvider(
 			std::string uiDirectory
 		);
 
-		__declspec(dllexport) std::string Get() override;
+		std::string Get() override;
 
 	private:
 		std::string _uiDirectory;

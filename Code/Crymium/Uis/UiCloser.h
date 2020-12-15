@@ -1,6 +1,6 @@
 #pragma once
-#include "Browsers/Core/IBrowser.h"
-#include "Uis/Core/IUiCloser.h"
+#include "Crymium/Browsers/Core/IBrowser.h"
+#include "Crymium/Uis/Core/IUiCloser.h"
 
 namespace Crymium::Uis
 {
@@ -8,11 +8,11 @@ namespace Crymium::Uis
 		: public IUiCloser
 	{
 	public:
-		__declspec(dllexport) UiCloser(
+		UiCloser(
 			IBrowser* browser
 		);
 
-		__declspec(dllexport) void Close() override;
+		void Close() override;
 		
 	private:
 		IBrowser* _browser;

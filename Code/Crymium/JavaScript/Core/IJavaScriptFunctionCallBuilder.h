@@ -8,7 +8,7 @@ namespace Crymium::JavaScript::Core
 	{
 		virtual ~IJavaScriptFunctionCallBuilder() = default;
 
-		virtual std::string Build(std::string functionName, const std::vector<std::string>& parameters) = 0;
+		virtual std::string Build(std::string functionName, std::vector<std::string> parameters) = 0;
 	};
 }
 

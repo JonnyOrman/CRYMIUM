@@ -1,5 +1,4 @@
 #pragma once
-#include <CryRenderer/IRenderer.h>
 
 namespace Crymium::Rendering::Core
 {

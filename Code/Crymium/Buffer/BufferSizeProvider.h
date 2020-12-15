@@ -1,7 +1,7 @@
 #pragma once
-#include "Buffer/Core/IBufferSizeProvider.h"
-#include "Rendering/Core/IRendererSettings.h"
-#include "Buffer/Core/IBufferSettings.h"
+#include "Crymium/Buffer/Core/IBufferSizeProvider.h"
+#include "Crymium/Rendering/Core/IRendererSettings.h"
+#include "Crymium/Buffer/Core/IBufferSettings.h"
 
 namespace Crymium::Buffer
 {
@@ -10,12 +10,12 @@ namespace Crymium::Buffer
 		public IBufferSizeProvider
 	{
 	public:
-		__declspec(dllexport) BufferSizeProvider(
+		BufferSizeProvider(
 			IRendererSettings* rendererSettings,
 			IBufferSettings* bufferSettings
 		);
 
-		__declspec(dllexport) int Get() override;
+		int Get() override;
 
 	private:
 		IRendererSettings* _rendererSettings;

@@ -1,7 +1,7 @@
 #pragma once
-#include "Core/IInitialiser.h"
-#include "Cef/Core/ICrymiumCefInitialiser.h"
-#include "Cry/Core/ICryInitialiser.h"
+#include "Crymium/Core/IInitialiser.h"
+#include "Crymium/Cef/Core/ICrymiumCefInitialiser.h"
+#include "Crymium/Cry/Core/ICryInitialiser.h"
 
 namespace Crymium
 {
@@ -10,12 +10,12 @@ namespace Crymium
 		public Crymium::Core::ICrymiumInitialiser
 	{
 	public:
-		__declspec(dllexport) CrymiumInitialiser(
+		CrymiumInitialiser(
 			ICrymiumCefInitialiser* crymiumCefInitialiser,
 			ICryInitialiser* cryInitialiser
 		);
 
-		__declspec(dllexport) void Initialise() override;
+		void Initialise() override;
 
 	private:
 		ICrymiumCefInitialiser* _crymiumCefInitialiser;

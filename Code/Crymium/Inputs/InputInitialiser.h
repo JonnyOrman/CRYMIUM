@@ -1,5 +1,5 @@
 #pragma once
-#include "Inputs/Core/IInputInitialiser.h"
+#include "Crymium/Inputs/Core/IInputInitialiser.h"
 #include <CryInput/IInput.h>
 
 namespace Crymium::Inputs::Core
@@ -8,11 +8,11 @@ namespace Crymium::Inputs::Core
 		: public IInputInitialiser
 	{
 	public:
-		__declspec(dllexport) InputInitialiser(
+		InputInitialiser(
 			IInputEventListener* inputEventListener
 		);
 
-		__declspec(dllexport) void Initialise() override;
+		void Initialise() override;
 
 	private:
 		IInputEventListener* _inputEventListener;

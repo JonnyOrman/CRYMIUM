@@ -1,6 +1,6 @@
 #pragma once
 #include "include/cef_client.h"
-#include "Buffer/BufferRenderHandler.h"
+#include "Crymium/Buffer/BufferRenderHandler.h"
 #include "include/wrapper/cef_message_router.h"
 #include "MessageHandler.h"
 
@@ -12,24 +12,24 @@ namespace Crymium::Cef
         public CefLifeSpanHandler
     {
     public:
-        __declspec(dllexport) explicit CefBrowserClient(
+        explicit CefBrowserClient(
             BufferRenderHandler* renderHandler,
             CefRefPtr<CefMessageRouterBrowserSide> messageRouter,
             MessageHandler* messageHandler
         );
 
-        __declspec(dllexport) CefRefPtr<CefRenderHandler> GetRenderHandler() OVERRIDE;
+        CefRefPtr<CefRenderHandler> GetRenderHandler() OVERRIDE;
     	
-        __declspec(dllexport) CefRefPtr<CefLifeSpanHandler> GetLifeSpanHandler() OVERRIDE;
+        CefRefPtr<CefLifeSpanHandler> GetLifeSpanHandler() OVERRIDE;
     	
-        __declspec(dllexport) bool OnProcessMessageReceived(
+        bool OnProcessMessageReceived(
             CefRefPtr<CefBrowser> browser,
             CefRefPtr<CefFrame> frame,
             CefProcessId source_process,
             CefRefPtr<CefProcessMessage> message
         ) OVERRIDE;
 
-        __declspec(dllexport) void OnAfterCreated(CefRefPtr<CefBrowser> browser) OVERRIDE;
+        void OnAfterCreated(CefRefPtr<CefBrowser> browser) OVERRIDE;
     	
     private:
         CefRefPtr<CefMessageRouterBrowserSide> _messageRouter;

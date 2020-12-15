@@ -9,25 +9,25 @@ namespace Crymium::Cef
 		public CefBrowserProcessHandler
     {
     public:
-        __declspec(dllexport) CrymiumCefApp() = default;
+        CrymiumCefApp() = default;
 
-        __declspec(dllexport) void OnContextCreated(CefRefPtr<CefBrowser> browser,
+        void OnContextCreated(CefRefPtr<CefBrowser> browser,
             CefRefPtr<CefFrame> frame,
             CefRefPtr<CefV8Context> context) override;
 
-        __declspec(dllexport) CefRefPtr<CefRenderProcessHandler> GetRenderProcessHandler() override;
+        CefRefPtr<CefRenderProcessHandler> GetRenderProcessHandler() override;
 
-        __declspec(dllexport) bool OnProcessMessageReceived(CefRefPtr<CefBrowser> browser,
+        bool OnProcessMessageReceived(CefRefPtr<CefBrowser> browser,
             CefRefPtr<CefFrame> frame,
             CefProcessId source_process,
             CefRefPtr<CefProcessMessage> message) override;
 
-        __declspec(dllexport) CefRefPtr<CefBrowserProcessHandler> GetBrowserProcessHandler() override;
+        CefRefPtr<CefBrowserProcessHandler> GetBrowserProcessHandler() override;
 
-        __declspec(dllexport) void OnRenderProcessThreadCreated(
+        void OnRenderProcessThreadCreated(
             CefRefPtr<CefListValue> extra_info) override;
 
-        __declspec(dllexport) void OnRenderThreadCreated(CefRefPtr<CefListValue> extra_info) override;
+        void OnRenderThreadCreated(CefRefPtr<CefListValue> extra_info) override;
 
     private:
         IMPLEMENT_REFCOUNTING(CrymiumCefApp);

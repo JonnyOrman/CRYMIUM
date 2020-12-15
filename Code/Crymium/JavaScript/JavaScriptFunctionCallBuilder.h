@@ -1,5 +1,5 @@
 #pragma once
-#include "JavaScript/Core/IJavaScriptFunctionCallBuilder.h"
+#include "Crymium/JavaScript/Core/IJavaScriptFunctionCallBuilder.h"
 
 namespace Crymium::JavaScript
 {
@@ -7,9 +7,9 @@ namespace Crymium::JavaScript
 		: public IJavaScriptFunctionCallBuilder
 	{
 	public:
-		__declspec(dllexport) JavaScriptFunctionCallBuilder() = default;
+		JavaScriptFunctionCallBuilder() = default;
 
-		__declspec(dllexport) std::string Build(std::string functionName, const std::vector<std::string>& parameters) override;
+		std::string Build(std::string functionName, std::vector<std::string> parameters) override;
 	};
 }
 

@@ -25,15 +25,9 @@ void CrymiumCefAppInitialiser::Initialise()
 	
     CefRefPtr<CefApp> app = new CrymiumCefApp();
 
-    CefExecuteProcess(
-        *mainArgs, 
-        app, 
-        sandboxInfo
-    );
-	
     CefInitialize(
         *mainArgs,
-        settings, 
+        settings,
         app,
         sandboxInfo
     );

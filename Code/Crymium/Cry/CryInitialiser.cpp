@@ -2,11 +2,11 @@
 
 CryInitialiser::CryInitialiser(
 	ICrymiumRendererInitialiser* crymiumRendererInitialiser,
-	IInputInitialiser* inputInitialiser
+	IInputInitialiser* crymiumInputInitialiser
 )
 :
 _crymiumRendererInitialiser(crymiumRendererInitialiser),
-_inputInitialiser(inputInitialiser)
+_crymiumInputInitialiser(crymiumInputInitialiser)
 {
 }
 
@@ -14,5 +14,5 @@ void CryInitialiser::Initialise()
 {
 	_crymiumRendererInitialiser->Initialise();
 
-	_inputInitialiser->Initialise();
+	_crymiumInputInitialiser->Initialise();
 }

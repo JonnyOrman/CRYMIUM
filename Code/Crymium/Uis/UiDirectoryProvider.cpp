@@ -4,7 +4,7 @@ UiDirectoryProvider::UiDirectoryProvider(
 	std::string uiDirectory
 )
 :
-_uiDirectory(uiDirectory)
+_uiDirectory(std::move(uiDirectory))
 {
 }
 

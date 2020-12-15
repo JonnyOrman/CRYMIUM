@@ -1,5 +1,5 @@
 #pragma once
-#include "Inputs/Core/IKeyIdMapper.h"
+#include "Crymium/Inputs/Core/IKeyIdMapper.h"
 
 namespace Crymium::Inputs::Core
 {
@@ -7,9 +7,9 @@ namespace Crymium::Inputs::Core
 		: public IKeyIdMapper
 	{
 	public:
-		__declspec(dllexport) KeyIdMapper() = default;
+		KeyIdMapper() = default;
 
-		__declspec(dllexport) int Map(EKeyId keyId) override;
+		int Map(EKeyId keyId) override;
 	};
 }
 

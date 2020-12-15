@@ -1,7 +1,7 @@
 #pragma once
-#include "Textures/Core/ITextureProvider.h"
-#include "Textures/Core/ITextureRemover.h"
-#include "Rendering/Core/ICrymiumRenderer.h"
+#include "Crymium/Textures/Core/ITextureProvider.h"
+#include "Crymium/Textures/Core/ITextureRemover.h"
+#include "Crymium/Rendering/Core/ICrymiumRenderer.h"
 
 namespace Crymium::Textures
 {
@@ -10,12 +10,12 @@ namespace Crymium::Textures
 		public ITextureRemover
 	{
 	public:
-		__declspec(dllexport) TextureRemover(
+		TextureRemover(
 			ITextureProvider* textureProvider,
 			ICrymiumRenderer* crymiumRenderer
 		);
 
-		__declspec(dllexport) void Remove() override;
+		void Remove() override;
 
 	private:
 		ITextureProvider* _textureProvider;

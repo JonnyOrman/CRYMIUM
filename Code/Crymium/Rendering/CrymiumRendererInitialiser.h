@@ -1,6 +1,6 @@
 #pragma once
-#include "Rendering/Core/ICrymiumRendererInitialiser.h"
-#include "Rendering/Core/ICrymiumRenderer.h"
+#include "Crymium/Rendering/Core/ICrymiumRendererInitialiser.h"
+#include "Crymium/Rendering/Core/ICrymiumRenderer.h"
 
 namespace Crymium::Rendering
 {
@@ -9,12 +9,12 @@ namespace Crymium::Rendering
 		public ICrymiumRendererInitialiser
 	{
 	public:
-		__declspec(dllexport) CrymiumRendererInitialiser(
+		CrymiumRendererInitialiser(
 			ICrymiumRenderer* crymiumRenderer,
 			ICaptureFrameListener* captureFrameListener
 		);
 
-		__declspec(dllexport) void Initialise() override;
+		void Initialise() override;
 
 	private:
 		ICrymiumRenderer* _crymiumRenderer;

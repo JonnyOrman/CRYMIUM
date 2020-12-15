@@ -8,7 +8,7 @@ namespace Crymium::JavaScript::Core
 	{
 		virtual ~IJavaScriptFunctionExecutor() = default;
 
-		virtual void Execute(const char* functionName, const std::vector<std::string>& parameters) = 0;
+		virtual void Execute(const char* functionName, std::vector<std::string> parameters) = 0;
 	};
 }
 

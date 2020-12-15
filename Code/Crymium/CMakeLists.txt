@@ -29,7 +29,7 @@ add_sources("Browsers_uber.cpp"
 
 add_sources("Browsers_Core_uber.cpp"
     PROJECTS Crymium
-    SOURCE_GROUP Core
+    SOURCE_GROUP Browsers\\\\Core
 		"Browsers/Core/IBrowser.h"
         "Browsers/Core/IBrowserSettingsCreator.h"
         "Browsers/Core/IWindowInfoCreator.h"
@@ -37,7 +37,7 @@ add_sources("Browsers_Core_uber.cpp"
 
 add_sources("Buffer_uber.cpp"
     PROJECTS Crymium
-    SOURCE_GROUP "Buffer"
+    SOURCE_GROUP Buffer
         "Buffer/BufferProvider.cpp"
         "Buffer/BufferRenderHandler.cpp"
         "Buffer/BufferSettings.cpp"
@@ -50,7 +50,7 @@ add_sources("Buffer_uber.cpp"
 
 add_sources("Buffer_Core_uber.cpp"
     PROJECTS Crymium
-    SOURCE_GROUP "Buffer/Core"
+    SOURCE_GROUP Buffer\\\\Core
         "Buffer/Core/IBufferProvider.h"
         "Buffer/Core/IBufferSettings.h"
         "Buffer/Core/IBufferSizeProvider.h"
@@ -58,7 +58,7 @@ add_sources("Buffer_Core_uber.cpp"
 
 add_sources("Cef_uber.cpp"
     PROJECTS Crymium
-    SOURCE_GROUP "Cef"
+    SOURCE_GROUP Cef
         "Cef/CefRectSettings.cpp"
         "Cef/CefCaptureFrameListener.cpp"
 		"Cef/CefBrowserClient.cpp"
@@ -87,7 +87,7 @@ add_sources("Cef_uber.cpp"
 
 add_sources("Cef_Core_uber.cpp"
     PROJECTS Crymium
-    SOURCE_GROUP "Cef/Core"
+    SOURCE_GROUP Cef\\\\Core
 		"Cef/Core/ICefInitialiser.h"
         "Cef/Core/ICefRectSettings.h"
         "Cef/Core/ICefMessageHandler.h"
@@ -100,27 +100,27 @@ add_sources("Cef_Core_uber.cpp"
 
 add_sources("Core_uber.cpp"
     PROJECTS Crymium
-    SOURCE_GROUP "Core"
-        "Core/IContainer.h"
+    SOURCE_GROUP Core
+        "Core/ICrymiumContainer.h"
         "Core/IInitialiser.h"
 )
 
 add_sources("Cry_uber.cpp"
     PROJECTS Crymium
-    SOURCE_GROUP "Cry"
+    SOURCE_GROUP Cry
 		"Cry/CryInitialiser.cpp"
         "Cry/CryInitialiser.h"
 )
 
 add_sources("Cry_Core_uber.cpp"
     PROJECTS Crymium
-    SOURCE_GROUP "Cry/Core"
+    SOURCE_GROUP Cry\\\\Core
 		"Cry/Core/ICryInitialiser.h"
 )
 
 add_sources("Inputs_uber.cpp"
     PROJECTS Crymium
-    SOURCE_GROUP "Inputs"
+    SOURCE_GROUP Inputs
         "Inputs/InputInitialiser.cpp"
 		"Inputs/InputMapper.cpp"
         "Inputs/InputStateMapper.cpp"
@@ -133,7 +133,7 @@ add_sources("Inputs_uber.cpp"
 
 add_sources("Inputs_Core_uber.cpp"
     PROJECTS Crymium
-    SOURCE_GROUP "Inputs/Core"
+    SOURCE_GROUP Inputs\\\\Core
         "Inputs/Core/IInputInitialiser.h"
 		"Inputs/Core/IInputMapper.h"
 		"Inputs/Core/IInputStateMapper.h"
@@ -142,7 +142,7 @@ add_sources("Inputs_Core_uber.cpp"
 
 add_sources("JavaScrip_uber.cpp"
     PROJECTS Crymium
-    SOURCE_GROUP "JavaScript"
+    SOURCE_GROUP JavaScript
         "JavaScript/JavaScriptFunctionCallBuilder.cpp"
         "JavaScript/JavaScriptExecutor.cpp"
         "JavaScript/JavaScriptFunctionExecutor.cpp"
@@ -153,7 +153,7 @@ add_sources("JavaScrip_uber.cpp"
 
 add_sources("JavaScript_Core_uber.cpp"
     PROJECTS Crymium
-    SOURCE_GROUP "JavaScript/Core"
+    SOURCE_GROUP JavaScript\\\\Core
         "JavaScript/Core/IJavaScriptFunctionCallBuilder.h"
         "JavaScript/Core/IJavaScriptExecutor.h"
         "JavaScript/Core/IJavaScriptFunctionExecutor.h"
@@ -161,7 +161,7 @@ add_sources("JavaScript_Core_uber.cpp"
 
 add_sources("Rendering_uber.cpp"
     PROJECTS Crymium
-    SOURCE_GROUP "Rendering"
+    SOURCE_GROUP Rendering
         "Rendering/CrymiumRenderer.cpp"
         "Rendering/CrymiumRendererInitialiser.cpp"
 		"Rendering/RendererProvider.cpp"
@@ -174,7 +174,7 @@ add_sources("Rendering_uber.cpp"
 
 add_sources("Rendering_Core_uber.cpp"
     PROJECTS Crymium
-    SOURCE_GROUP "Rendering/Core"
+    SOURCE_GROUP Rendering\\\\Core
         "Rendering/Core/ICrymiumRenderer.h"
         "Rendering/Core/ICrymiumRendererInitialiser.h"
 		"Rendering/Core/IRendererProvider.h"
@@ -183,7 +183,7 @@ add_sources("Rendering_Core_uber.cpp"
 
 add_sources("Textures_uber.cpp"
     PROJECTS Crymium
-    SOURCE_GROUP "Textures"
+    SOURCE_GROUP Textures
         "Textures/TextureSettings.cpp"
 		"Textures/TextureUpdater.cpp"
         "Textures/TextureRemover.cpp"
@@ -202,7 +202,7 @@ add_sources("Textures_uber.cpp"
 
 add_sources("Textures_Core_uber.cpp"
     PROJECTS Crymium
-    SOURCE_GROUP "Textures/Core"
+    SOURCE_GROUP Textures\\\\Core
         "Textures/Core/ITextureSettings.h"
 		"Textures/Core/ITextureUpdater.h"
         "Textures/Core/ITextureRemover.h"
@@ -214,7 +214,7 @@ add_sources("Textures_Core_uber.cpp"
 
 add_sources("Uis_uber.cpp"
     PROJECTS Crymium
-    SOURCE_GROUP "Uis"
+    SOURCE_GROUP Uis
         "Uis/CryUiDirectoryProvider.cpp"
         "Uis/UiActivator.cpp"
         "Uis/UiCloser.cpp"
@@ -231,7 +231,7 @@ add_sources("Uis_uber.cpp"
 
 add_sources("Uis_Core_uber.cpp"
     PROJECTS Crymium
-    SOURCE_GROUP "Uis/Core"
+    SOURCE_GROUP Uis\\\\Core
         "Uis/Core/IUiActivator.h"
         "Uis/Core/IUiCloser.h"
         "Uis/Core/IUiDirectoryProvider.h"
@@ -241,7 +241,7 @@ add_sources("Uis_Core_uber.cpp"
 
 add_sources("uber.cpp"
     PROJECTS Crymium
-    SOURCE_GROUP "Root"
+    SOURCE_GROUP Root
         "CrymiumPlugin.cpp"
 		"StdAfx.cpp"
         "CrymiumPlugin.h"
@@ -263,13 +263,13 @@ target_include_directories(${THIS_PROJECT}
 PRIVATE
     "${CRYENGINE_DIR}/Code/CryEngine/CryCommon"
     "${CRYENGINE_DIR}/Code/CryEngine/CryAction"
-	"../../"
-	"../../build/cef"
+	"../../code/"
+    "../../build/third_party/cef/cef_binary_79.1.27+gd2449e5+chromium-79.0.3945.117_windows64"
 )
 
 set_target_properties(Crymium PROPERTIES
             CXX_STANDARD 17
             )
 
-target_link_libraries(Crymium PUBLIC "${PROJECT_DIR}/build/cef/libcef.lib")
-target_link_libraries(Crymium PUBLIC "${PROJECT_DIR}/build/cef/libcef_dll_wrapper.lib")
+target_link_libraries(Crymium PUBLIC "../third_party/cef/cef_binary_79.1.27+gd2449e5+chromium-79.0.3945.117_windows64/Debug/libcef")
+target_link_libraries(Crymium PUBLIC "../libcef_dll_wrapper/Debug/libcef_dll_wrapper")

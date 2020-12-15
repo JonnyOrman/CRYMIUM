@@ -1,5 +1,5 @@
 #pragma once
-#include "Cef/Core/ICrymiumSandboxInfoCreator.h"
+#include "Crymium/Cef/Core/ICrymiumSandboxInfoCreator.h"
 
 namespace Crymium::Cef
 {
@@ -7,9 +7,9 @@ namespace Crymium::Cef
         : public ICrymiumSandboxInfoCreator
     {
     public:
-        __declspec(dllexport) CrymiumSandboxInfoCreator() = default;
+        CrymiumSandboxInfoCreator() = default;
 
-        __declspec(dllexport) void* Create() override;
+    	void* Create() override;
     };
 }
 

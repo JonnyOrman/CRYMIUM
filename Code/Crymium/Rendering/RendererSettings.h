@@ -1,6 +1,6 @@
 #pragma once
-#include "Rendering/Core/IRendererSettings.h"
-#include "Rendering/Core/IRendererProvider.h"
+#include "Crymium/Rendering/Core/IRendererSettings.h"
+#include "Crymium/Rendering/Core/IRendererProvider.h"
 
 namespace Crymium
 {
@@ -9,13 +9,13 @@ namespace Crymium
 		public IRendererSettings
 	{
 	public:
-		__declspec(dllexport) RendererSettings(
+		RendererSettings(
 			IRendererProvider* rendererProvider
 		);
 
-		__declspec(dllexport) int GetWidth() override;
+		int GetWidth() override;
 
-		__declspec(dllexport) int GetHeight() override;
+		int GetHeight() override;
 
 	private:
 		IRendererProvider* _rendererProvider;

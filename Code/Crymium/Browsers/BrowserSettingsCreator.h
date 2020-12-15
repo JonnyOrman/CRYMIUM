@@ -1,5 +1,5 @@
 #pragma once
-#include "Browsers/Core/IBrowserSettingsCreator.h"
+#include "Crymium/Browsers/Core/IBrowserSettingsCreator.h"
 
 namespace Crymium::Browsers
 {
@@ -7,9 +7,9 @@ namespace Crymium::Browsers
 		: public IBrowserSettingsCreator
 	{
 	public:
-		__declspec(dllexport) BrowserSettingsCreator() = default;
+		BrowserSettingsCreator() = default;
 
-		__declspec(dllexport) CefBrowserSettings Create() override;
+		CefBrowserSettings Create() override;
 	};
 }
 

@@ -1,5 +1,5 @@
 #pragma once
-#include "Cef/Core/ICefRectSettings.h"
+#include "Crymium/Cef/Core/ICefRectSettings.h"
 
 namespace Crymium::Cef
 {
@@ -8,14 +8,14 @@ namespace Crymium::Cef
 		public ICrymiumCefRectSettings
 	{
 	public:
-		__declspec(dllexport) CrymiumCefRectSettings(
+		CrymiumCefRectSettings(
 			int x,
 			int y
 		);
 
-		__declspec(dllexport) int GetX() override;
+		int GetX() override;
 
-		__declspec(dllexport) int GetY() override;
+		int GetY() override;
 
 	private:
 		int x_;

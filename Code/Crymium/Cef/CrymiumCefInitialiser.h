@@ -1,7 +1,7 @@
 #pragma once
-#include "Cef/Core/ICrymiumCefInitialiser.h"
-#include "Cef/Core/ICefInitialiser.h"
-#include "Browsers/Core/IBrowser.h"
+#include "Crymium/Cef/Core/ICrymiumCefInitialiser.h"
+#include "Crymium/Cef/Core/ICefInitialiser.h"
+#include "Crymium/Browsers/Core/IBrowser.h"
 
 namespace Crymium::Cef
 {
@@ -9,12 +9,12 @@ namespace Crymium::Cef
         : public ICrymiumCefInitialiser
     {
     public:
-        __declspec(dllexport) CrymiumCefInitialiser(
+        CrymiumCefInitialiser(
             ICrymiumCefAppInitialiser* crymiumCefAppInitialiser,
             IBrowser* crymiumBrowser
         );
 
-        __declspec(dllexport) void Initialise() override;
+    	void Initialise() override;
 
     private:
         ICrymiumCefAppInitialiser* _crymiumCefAppInitialiser;

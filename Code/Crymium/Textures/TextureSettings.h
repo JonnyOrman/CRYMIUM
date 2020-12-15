@@ -1,6 +1,6 @@
 #pragma once
-#include "Textures/Core/ITextureSettings.h"
-#include "Rendering/Core/IRendererSettings.h"
+#include "Crymium/Textures/Core/ITextureSettings.h"
+#include "Crymium/Rendering/Core/IRendererSettings.h"
 
 namespace Crymium::Textures
 {
@@ -9,7 +9,7 @@ namespace Crymium::Textures
 		public ITextureSettings
 	{
 	public:
-		__declspec(dllexport) TextureSettings(
+		TextureSettings(
 			const char* name,
 			int numberOfMips,
 			int flags,
@@ -17,17 +17,17 @@ namespace Crymium::Textures
 			IRendererSettings* renderSettings
 		);
 
-		__declspec(dllexport) const char* GetName() override;
+		const char* GetName() override;
 
-		__declspec(dllexport) int GetNumberOfMips() override;
+		int GetNumberOfMips() override;
 
-		__declspec(dllexport) int GetFlags() override;
+		int GetFlags() override;
 
-		__declspec(dllexport) ETEX_Format GetEtexFormat() override;
+		ETEX_Format GetEtexFormat() override;
 
-		__declspec(dllexport) int GetWidth() override;
+		int GetWidth() override;
 
-		__declspec(dllexport) int GetHeight() override;
+		int GetHeight() override;
 		
 	private:
 		const char* _name;

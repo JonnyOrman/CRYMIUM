@@ -1,7 +1,7 @@
 #pragma once
-#include "Uis/Core/IUiSettings.h"
-#include "Uis/Core/IUiPathResolver.h"
-#include "Uis/Core/IUiDirectoryProvider.h"
+#include "Crymium/Uis/Core/IUiSettings.h"
+#include "Crymium/Uis/Core/IUiPathResolver.h"
+#include "Crymium/Uis/Core/IUiDirectoryProvider.h"
 
 namespace Crymium::Uis
 {
@@ -9,12 +9,12 @@ namespace Crymium::Uis
 		: public IUiPathResolver
 	{
 	public:
-		__declspec(dllexport) UiPathResolver(
+		UiPathResolver(
 			IUiSettings* uiSettings,
 			IUiDirectoryProvider* uiDirectoryProvider
 		);
 
-		__declspec(dllexport) std::string Resolve(std::string uiName) override;
+		std::string Resolve(std::string uiName) override;
 
 	private:
 		IUiSettings* _uiSettings;

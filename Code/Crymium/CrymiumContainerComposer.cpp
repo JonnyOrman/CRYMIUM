@@ -43,12 +43,12 @@
 #include "Uis/CryUiDirectoryProvider.h"
 #include "Uis/UiDirectoryProvider.h"
 
-std::unique_ptr<ICrymiumContainer> ContainerComposer::Compose(std::string uiDirectory)
+std::unique_ptr<ICrymiumContainer> CrymiumContainerComposer::Compose(std::string uiDirectory)
 {
 	auto container = std::make_unique<CrymiumContainer>();
 
 	container->Register(std::make_unique<CrymiumCefSettings>(
-		"cefclient.exe",
+		"C:/Program Files (x86)/Crytek/CRYENGINE Launcher/Crytek/CRYENGINE_5.6/bin/win_x64/Crymium.SubProcess.exe",
 		true,
 		LOGSEVERITY_WARNING,
 		8012,
@@ -63,12 +63,6 @@ std::unique_ptr<ICrymiumContainer> ContainerComposer::Compose(std::string uiDire
 
 	container->Register(std::make_unique<CrymiumSandboxInfoCreator>());
 	
-	container->Register(std::make_unique<CrymiumCefAppInitialiser>(
-		container->GetCrymiumCefSettingsCreator(),
-		container->GetCrymiumCefMainArgsCreator(),
-		container->GetCrymiumSandboxInfoCreator()
-		));
-
 	container->Register(std::make_unique<RendererProvider>());
 	
 	container->Register(std::make_unique<RendererSettings>(
@@ -94,8 +88,8 @@ std::unique_ptr<ICrymiumContainer> ContainerComposer::Compose(std::string uiDire
 		));
 	
 	auto cefRenderHandler = new BufferRenderHandler(
-		container->GetCrymiumCefRectSettings(),
 		container->GetRendererSettings(),
+		container->GetCrymiumCefRectSettings(),
 		container->GetBufferProvider()
 	);
 
@@ -182,6 +176,12 @@ std::unique_ptr<ICrymiumContainer> ContainerComposer::Compose(std::string uiDire
 
 	container->Register(std::make_unique<CefInputEventListener>(
 		container.get()
+		));
+
+	container->Register(std::make_unique<CrymiumCefAppInitialiser>(
+		container->GetCrymiumCefSettingsCreator(),
+		container->GetCrymiumCefMainArgsCreator(),
+		container->GetCrymiumSandboxInfoCreator()
 		));
 
 	container->Register(std::make_unique<CrymiumCefInitialiser>(

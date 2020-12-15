@@ -1,35 +1,29 @@
 #pragma once
 #include <include/cef_render_handler.h>
 #include "include/cef_app.h"
-#include "Rendering/Core/IRendererSettings.h"
-#include "Cef/Core/ICefRectSettings.h"
-#include "Buffer/Core/IBufferProvider.h"
+#include "Crymium/Rendering/Core/IRendererSettings.h"
+#include "Crymium/Cef/Core/ICefRectSettings.h"
+#include "Crymium/Buffer/Core/IBufferProvider.h"
 
 namespace Crymium::Buffer
 {
     class BufferRenderHandler : public CefRenderHandler
     {
     public:
-        __declspec(dllexport) BufferRenderHandler(
-            ICrymiumCefRectSettings* cefRectSettings,
+        BufferRenderHandler(
             IRendererSettings* rendererSettings,
+            ICrymiumCefRectSettings* cefRectSettings,
             IBufferProvider* bufferProvider
         );
 
-        __declspec(dllexport) void GetViewRect(CefRefPtr<CefBrowser> browser, CefRect& rect) override;
+        void GetViewRect(CefRefPtr<CefBrowser> browser, CefRect& rect) override;
 
-        __declspec(dllexport) void OnPaint(
-            CefRefPtr<CefBrowser> browser, 
-            PaintElementType type, 
-            const RectList& dirtyRects,
-            const void* buffer,
-            int width,
-            int height
-        ) override;
+        void OnPaint(CefRefPtr<CefBrowser> browser, PaintElementType type, const RectList& dirtyRects,
+            const void* buffer, int width, int height) override;
 
     private:
-        ICrymiumCefRectSettings* _cefRectSettings;
         IRendererSettings* _rendererSettings;
+        ICrymiumCefRectSettings* _cefRectSettings;
         IBufferProvider* _bufferProvider;
 
     public:

@@ -1,6 +1,6 @@
 #pragma once
 #include <CryRenderer/IRenderer.h>
-#include "Textures/Core/ITextureUpdater.h"
+#include "Crymium/Textures/Core/ITextureUpdater.h"
 
 namespace Crymium::Cef
 {
@@ -9,19 +9,19 @@ namespace Crymium::Cef
 		public ICaptureFrameListener
 	{
 	public:
-		__declspec(dllexport) CrymiumCefCaptureFrameListener(
+		CrymiumCefCaptureFrameListener(
 			ITextureUpdater* textureUpdater
 		);
 
-		__declspec(dllexport) bool OnNeedFrameData(unsigned char*& pConvertedTextureBuf) override;
+		bool OnNeedFrameData(unsigned char*& pConvertedTextureBuf) override;
 
-		__declspec(dllexport) void OnFrameCaptured() override;
+		void OnFrameCaptured() override;
 
-		__declspec(dllexport) int OnGetFrameWidth() override;
+		int OnGetFrameWidth() override;
 
-		__declspec(dllexport) int OnGetFrameHeight() override;
+		int OnGetFrameHeight() override;
 
-		__declspec(dllexport) int OnCaptureFrameBegin(int* pTexHandle) override;
+		int OnCaptureFrameBegin(int* pTexHandle) override;
 
 	private:
 		ITextureUpdater* _textureUpdater;

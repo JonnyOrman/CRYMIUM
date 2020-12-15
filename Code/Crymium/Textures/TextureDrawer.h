@@ -1,6 +1,6 @@
 #pragma once
-#include "Textures/Core/ITextureProvider.h"
-#include "Textures/Core/ITextureDrawer.h"
+#include "Crymium/Textures/Core/ITextureProvider.h"
+#include "Crymium/Textures/Core/ITextureDrawer.h"
 
 namespace Crymium::Textures
 {
@@ -9,11 +9,11 @@ namespace Crymium::Textures
 		public ITextureDrawer
 	{
 	public:
-		__declspec(dllexport) TextureDrawer(
+		TextureDrawer(
 			ITextureProvider* textureProvider
 		);
 
-		__declspec(dllexport) void Draw() override;
+		void Draw() override;
 
 	private:
 		ITextureProvider* _textureProvider;

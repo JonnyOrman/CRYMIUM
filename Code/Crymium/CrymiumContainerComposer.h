@@ -1,11 +1,11 @@
 #pragma once
-#include "Core/IContainer.h"
+#include "Crymium/Core/ICrymiumContainer.h"
 #include <string>
 #include <memory>
 
 namespace Crymium
 {
-	class ContainerComposer
+	class CrymiumContainerComposer
 	{
 	public:
 		__declspec(dllexport) static std::unique_ptr<ICrymiumContainer> Compose(std::string uiDirectory = "");

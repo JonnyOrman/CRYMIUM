@@ -1,5 +1,5 @@
 #pragma once
-#include "Uis/Core/IUiSettings.h"
+#include "Crymium/Uis/Core/IUiSettings.h"
 
 namespace Crymium::Uis
 {
@@ -7,14 +7,14 @@ namespace Crymium::Uis
 		: public IUiSettings
 	{
 	public:
-		__declspec(dllexport) UiSettings(
+		UiSettings(
 			std::string defaultFileName,
 			std::string defaultFileType
 		);
 
-		__declspec(dllexport) std::string GetDefaultFileName() override;
+		std::string GetDefaultFileName() override;
 
-		__declspec(dllexport) std::string GetDefaultFileType() override;
+		std::string GetDefaultFileType() override;
 		
 	private:
 		std::string _defaultFileName;

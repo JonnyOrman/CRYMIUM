@@ -1,6 +1,6 @@
 #pragma once
-#include "Cef/Core/ICrymiumCefSettings.h"
-#include "Cef/Core/ICrymiumCefSettingsCreator.h"
+#include "Crymium/Cef/Core/ICrymiumCefSettings.h"
+#include "Crymium/Cef/Core/ICrymiumCefSettingsCreator.h"
 
 namespace Crymium::Cef
 {
@@ -8,11 +8,11 @@ namespace Crymium::Cef
         : public ICrymiumCefSettingsCreator
     {
     public:
-        __declspec(dllexport) CrymiumCefSettingsCreator(
+        CrymiumCefSettingsCreator(
 			ICrymiumCefSettings* crymiumCefSettings
         );
 
-        __declspec(dllexport) CefSettings Create() override;
+    	CefSettings Create() override;
 
     private:
         ICrymiumCefSettings* _crymiumCefSettings;

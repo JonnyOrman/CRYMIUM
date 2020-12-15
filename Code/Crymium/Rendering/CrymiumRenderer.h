@@ -1,5 +1,5 @@
 #pragma once
-#include "Rendering/Core/ICrymiumRenderer.h"
+#include "Crymium/Rendering/Core/ICrymiumRenderer.h"
 
 namespace Crymium::Rendering
 {
@@ -8,9 +8,9 @@ namespace Crymium::Rendering
 		public ICrymiumRenderer
 	{
 	public:
-		__declspec(dllexport) CrymiumRenderer() = default;
+		CrymiumRenderer() = default;
 
-		__declspec(dllexport) ITexture* CreateTexture(
+		ITexture* CreateTexture(
 			const char* name, 
 			int width, 
 			int height, 
@@ -20,11 +20,11 @@ namespace Crymium::Rendering
 			int flags
 		) override;
 
-		__declspec(dllexport) CRY_HWND GetHWND() override;
+		CRY_HWND GetHWND() override;
 
-		__declspec(dllexport) void RegisterCaptureFrame(ICaptureFrameListener* captureFrameListener) override;
+		void RegisterCaptureFrame(ICaptureFrameListener* captureFrameListener) override;
 
-		__declspec(dllexport) void RemoveTexture(int textureId) override;
+		void RemoveTexture(int textureId) override;
 	};
 }
 

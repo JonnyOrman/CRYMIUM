@@ -1,5 +1,5 @@
 #pragma once
-#include "Inputs/Core/IInputStateMapper.h"
+#include "Crymium/Inputs/Core/IInputStateMapper.h"
 
 namespace Crymium::Inputs::Core
 {
@@ -7,9 +7,9 @@ namespace Crymium::Inputs::Core
 		: public IInputStateMapper
 	{
 	public:
-		__declspec(dllexport) InputStateMapper() = default;
+		InputStateMapper() = default;
 
-		__declspec(dllexport) cef_key_event_type_t Map(EInputState inputState) override;
+		cef_key_event_type_t Map(EInputState inputState) override;
 	};
 }
 

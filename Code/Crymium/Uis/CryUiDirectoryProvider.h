@@ -7,9 +7,9 @@ namespace Crymium::Uis
 		: public IUiDirectoryProvider
 	{
 	public:
-		__declspec(dllexport) CryUiDirectoryProvider() = default;
+		CryUiDirectoryProvider() = default;
 
-		__declspec(dllexport) std::string Get() override;
+		std::string Get() override;
 	};
 }
 

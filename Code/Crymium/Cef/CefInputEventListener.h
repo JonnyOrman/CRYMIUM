@@ -1,6 +1,6 @@
 #pragma once
 #include <CryInput/IInput.h>
-#include "Core/IContainer.h"
+#include "Crymium/Core/ICrymiumContainer.h"
 
 namespace Crymium::Cef
 {
@@ -9,11 +9,11 @@ namespace Crymium::Cef
 		public IInputEventListener
 	{
 	public:
-		__declspec(dllexport) CefInputEventListener(
+		CefInputEventListener(
 			ICrymiumContainer* crymiumContainer
 		);
 
-		__declspec(dllexport) bool OnInputEvent(const SInputEvent& event) override;
+		bool OnInputEvent(const SInputEvent& event) override;
 
 	private:
 		ICrymiumContainer* _crymiumContainer;

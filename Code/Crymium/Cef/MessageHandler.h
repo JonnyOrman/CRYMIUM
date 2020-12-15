@@ -1,6 +1,6 @@
 #pragma once
 #include <include/wrapper/cef_message_router.h>
-#include "Cef/Core/ICefMessageHandler.h"
+#include "Crymium/Cef/Core/ICefMessageHandler.h"
 
 namespace Crymium::Cef
 {
@@ -8,11 +8,11 @@ namespace Crymium::Cef
         : public CefMessageRouterBrowserSide::Handler
     {
     public:
-        __declspec(dllexport) MessageHandler(
+        MessageHandler(
             ICefMessageHandler* cefMessageHandler
         );
 
-        __declspec(dllexport) bool OnQuery(
+        bool OnQuery(
             CefRefPtr<CefBrowser> browser,
             CefRefPtr<CefFrame> frame,
             int64 query_id,

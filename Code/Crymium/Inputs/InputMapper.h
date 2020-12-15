@@ -1,7 +1,7 @@
 #pragma once
-#include "Inputs/Core/IInputStateMapper.h"
-#include "Inputs/Core/IKeyIdMapper.h"
-#include "Inputs/Core/IInputMapper.h"
+#include "Crymium/Inputs/Core/IInputStateMapper.h"
+#include "Crymium/Inputs/Core/IKeyIdMapper.h"
+#include "Crymium/Inputs/Core/IInputMapper.h"
 
 namespace Crymium::Inputs::Core
 {
@@ -9,12 +9,12 @@ namespace Crymium::Inputs::Core
 		: public IInputMapper
 	{
 	public:
-		__declspec(dllexport) InputMapper(
+		InputMapper(
 			IKeyIdMapper* keyIdMapper,
 			IInputStateMapper* inputStateMapper
 		);
 
-		__declspec(dllexport) CefKeyEvent Map(const SInputEvent& inputEvent) override;
+		CefKeyEvent Map(const SInputEvent& inputEvent) override;
 
 	private:
 		IKeyIdMapper* _keyIdMapper;

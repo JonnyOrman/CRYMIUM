@@ -1,5 +1,5 @@
 #pragma once
-#include "Buffer/Core/IBufferSettings.h"
+#include "Crymium/Buffer/Core/IBufferSettings.h"
 
 namespace Crymium::Buffer
 {
@@ -8,11 +8,11 @@ namespace Crymium::Buffer
 		public IBufferSettings
 	{
 	public:
-		__declspec(dllexport) BufferSettings(
+		BufferSettings(
 			int sizeMultiplier
 		);
 
-		__declspec(dllexport) int GetSizeMultiplier() override;
+		int GetSizeMultiplier() override;
 
 	private:
 		int _sizeMultiplier;

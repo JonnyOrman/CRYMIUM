@@ -1,6 +1,6 @@
 #pragma once
-#include "Browsers/Core/IBrowser.h"
-#include "JavaScript/Core/IJavaScriptExecutor.h"
+#include "Crymium/Browsers/Core/IBrowser.h"
+#include "Crymium/JavaScript/Core/IJavaScriptExecutor.h"
 
 namespace Crymium::JavaScript
 {
@@ -8,11 +8,11 @@ namespace Crymium::JavaScript
 		: public IJavaScriptExecutor
 	{
 	public:
-		__declspec(dllexport) JavaScriptExecutor(
+		JavaScriptExecutor(
 			IBrowser* crymiumBrowser
 		);
 
-		__declspec(dllexport) void Execute(const char* javaScript) override;
+		void Execute(const char* javaScript) override;
 
 	private:
 		IBrowser* _crymiumBrowser;

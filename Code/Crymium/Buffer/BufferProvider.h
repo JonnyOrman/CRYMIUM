@@ -1,6 +1,6 @@
 #pragma once
-#include "Buffer/Core/IBufferSizeProvider.h"
-#include "Buffer/Core/IBufferProvider.h"
+#include "Crymium/Buffer/Core/IBufferSizeProvider.h"
+#include "Crymium/Buffer/Core/IBufferProvider.h"
 
 namespace Crymium::Buffer
 {
@@ -9,13 +9,13 @@ namespace Crymium::Buffer
 		public IBufferProvider
 	{
 	public:
-		__declspec(dllexport) BufferProvider(
+		BufferProvider(
 			IBufferSizeProvider* bufferSizeProvider
 		);
 
-		__declspec(dllexport) void Set(const void* buffer) override;
+		void Set(const void* buffer) override;
 
-		__declspec(dllexport) unsigned char* Get() override;
+		unsigned char* Get() override;
 
 	private:
 		IBufferSizeProvider* _bufferSizeProvider;

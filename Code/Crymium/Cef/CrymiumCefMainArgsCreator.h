@@ -1,5 +1,5 @@
 #pragma once
-#include "Cef/Core/ICrymiumCefMainArgsCreator.h"
+#include "Crymium/Cef/Core/ICrymiumCefMainArgsCreator.h"
 
 namespace Crymium::Cef
 {
@@ -7,9 +7,9 @@ namespace Crymium::Cef
         : public ICrymiumCefMainArgsCreator
     {
     public:
-        __declspec(dllexport) CrymiumCefMainArgsCreator() = default;
+        CrymiumCefMainArgsCreator() = default;
 
-        __declspec(dllexport) std::unique_ptr<CefMainArgs> Create() override;
+        std::unique_ptr<CefMainArgs> Create() override;
     };
 }
 

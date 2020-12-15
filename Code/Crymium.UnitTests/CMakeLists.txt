@@ -20,7 +20,7 @@ add_sources_recursive_search()
 
 end_sources()
 
-CryUnitTestSuite(Crymium.UnitTests SOLUTION_FOLDER "Tests")
+CryUnitTestSuite(Crymium.UnitTests)
 
 target_include_directories(${THIS_PROJECT}
 
@@ -28,7 +28,7 @@ PRIVATE
     "${CRYENGINE_DIR}/Code/CryEngine/CryCommon"
     "${CRYENGINE_DIR}/Code/CryEngine/CryAction"
 	"../../"
-	"../../build/cef"
+    "../../build/third_party/cef/cef_binary_79.1.27+gd2449e5+chromium-79.0.3945.117_windows64"
 	"../Crymium"
 )
 
@@ -40,5 +40,3 @@ set_target_properties(Crymium.UnitTests PROPERTIES
 
 target_link_libraries(Crymium.UnitTests PUBLIC Crymium)
 target_link_libraries(Crymium.UnitTests PUBLIC gtest_main)
-
-SET(CMAKE_CXX_FLAGS "/EHsc")
