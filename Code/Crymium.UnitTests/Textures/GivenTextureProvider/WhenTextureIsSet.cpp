@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
-#include "Cry/Mocks/MockTexture.h"
+#include "Crymium.UnitTests/Cry/Mocks/MockTexture.h"
 #include "gmock/gmock.h"
-#include "Textures/TextureProvider.h"
+#include "Crymium/Textures/TextureProvider.h"
 
 namespace Crymium::UnitTests::Textures::GivenTextureProvider
 {

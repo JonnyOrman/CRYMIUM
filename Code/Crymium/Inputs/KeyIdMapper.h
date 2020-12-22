@@ -7,9 +7,9 @@ namespace Crymium::Inputs::Core
 		: public IKeyIdMapper
 	{
 	public:
-		KeyIdMapper() = default;
+		__declspec(dllexport) KeyIdMapper() = default;
 
-		int Map(EKeyId keyId) override;
+		__declspec(dllexport) int Map(EKeyId keyId) override;
 	};
 }
 

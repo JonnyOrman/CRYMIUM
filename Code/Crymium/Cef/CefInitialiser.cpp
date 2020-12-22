@@ -27,7 +27,7 @@ void CrymiumCefAppInitialiser::Initialise()
 
     CefInitialize(
         *mainArgs,
-        settings,
+        settings, 
         app,
         sandboxInfo
     );

@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
 #include "gmock/gmock.h"
-#include "Inputs/InputMapper.h"
-#include "Inputs/Mocks/MockInputStateMapper.h"
-#include "Inputs/Mocks/MockKeyIdMapper.h"
+#include "Crymium/Inputs/InputMapper.h"
+#include "Crymium.UnitTests/Inputs/Mocks/MockInputStateMapper.h"
+#include "Crymium.UnitTests/Inputs/Mocks/MockKeyIdMapper.h"
 
 namespace Crymium::UnitTests::Inputs::GivenInputMapper
 {

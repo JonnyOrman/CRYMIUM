@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
 #include "gmock/gmock.h"
-#include "Uis/Mocks/MockUiDirectoryProvider.h"
-#include "Uis/Mocks/MockUiSettings.h"
-#include "Uis/UiPathResolver.h"
+#include "Crymium.UnitTests/Uis/Mocks/MockUiDirectoryProvider.h"
+#include "Crymium.UnitTests/Uis/Mocks/MockUiSettings.h"
+#include "Crymium/Uis/UiPathResolver.h"
 
 namespace Crymium::UnitTests::Uis::GivenUiPathResolver
 {

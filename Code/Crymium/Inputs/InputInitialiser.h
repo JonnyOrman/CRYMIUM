@@ -8,11 +8,11 @@ namespace Crymium::Inputs::Core
 		: public IInputInitialiser
 	{
 	public:
-		InputInitialiser(
+		__declspec(dllexport) InputInitialiser(
 			IInputEventListener* inputEventListener
 		);
 
-		void Initialise() override;
+		__declspec(dllexport) void Initialise() override;
 
 	private:
 		IInputEventListener* _inputEventListener;

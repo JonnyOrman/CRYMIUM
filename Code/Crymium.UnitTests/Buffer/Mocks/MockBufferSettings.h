@@ -1,6 +1,6 @@
 #pragma once
 #include "gmock/gmock.h"
-#include "Buffer/Core/IBufferSettings.h"
+#include "Crymium/Buffer/Core/IBufferSettings.h"
 
 namespace Crymium::UnitTests::Buffer::Mocks
 {

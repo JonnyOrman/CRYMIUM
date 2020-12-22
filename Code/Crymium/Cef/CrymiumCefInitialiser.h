@@ -9,12 +9,12 @@ namespace Crymium::Cef
         : public ICrymiumCefInitialiser
     {
     public:
-        CrymiumCefInitialiser(
+        __declspec(dllexport) CrymiumCefInitialiser(
             ICrymiumCefAppInitialiser* crymiumCefAppInitialiser,
             IBrowser* crymiumBrowser
         );
 
-    	void Initialise() override;
+        __declspec(dllexport) void Initialise() override;
 
     private:
         ICrymiumCefAppInitialiser* _crymiumCefAppInitialiser;

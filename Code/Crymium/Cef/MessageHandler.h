@@ -8,11 +8,11 @@ namespace Crymium::Cef
         : public CefMessageRouterBrowserSide::Handler
     {
     public:
-        MessageHandler(
+        __declspec(dllexport) MessageHandler(
             ICefMessageHandler* cefMessageHandler
         );
 
-        bool OnQuery(
+        __declspec(dllexport) bool OnQuery(
             CefRefPtr<CefBrowser> browser,
             CefRefPtr<CefFrame> frame,
             int64 query_id,

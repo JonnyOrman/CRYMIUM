@@ -1,14 +1,14 @@
 #include "BufferRenderHandler.h"
 
 BufferRenderHandler::BufferRenderHandler(
-    IRendererSettings* rendererSettings,
     ICrymiumCefRectSettings* cefRectSettings,
+    IRendererSettings* rendererSettings,
     IBufferProvider* bufferProvider
 )
-    : 
+    :
+    _cefRectSettings(cefRectSettings),
 	_rendererSettings(rendererSettings),
-	_cefRectSettings(cefRectSettings),
-	_bufferProvider(std::move(bufferProvider))
+	_bufferProvider(bufferProvider)
 {
 }
 
@@ -22,8 +22,14 @@ void BufferRenderHandler::GetViewRect(CefRefPtr<CefBrowser> browser, CefRect& re
     );
 }
 
-void BufferRenderHandler::OnPaint(CefRefPtr<CefBrowser> browser, PaintElementType type,
-    const RectList& dirtyRects, const void* buffer, int width, int height)
+void BufferRenderHandler::OnPaint(
+    CefRefPtr<CefBrowser> browser,
+    PaintElementType type,
+    const RectList& dirtyRects, 
+    const void* buffer,
+    int width, 
+    int height
+)
 {
     _bufferProvider->Set(buffer);
 }

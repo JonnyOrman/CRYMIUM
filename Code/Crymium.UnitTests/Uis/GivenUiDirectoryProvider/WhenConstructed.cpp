@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include "gmock/gmock.h"
-#include "Uis/UiDirectoryProvider.h"
+#include "Crymium/Uis/UiDirectoryProvider.h"
 
 namespace Crymium::UnitTests::Uis::GivenUiDirectoryProvider
 {

@@ -10,12 +10,12 @@ namespace Crymium::Buffer
 		public IBufferSizeProvider
 	{
 	public:
-		BufferSizeProvider(
+		__declspec(dllexport) BufferSizeProvider(
 			IRendererSettings* rendererSettings,
 			IBufferSettings* bufferSettings
 		);
 
-		int Get() override;
+		__declspec(dllexport) int Get() override;
 
 	private:
 		IRendererSettings* _rendererSettings;

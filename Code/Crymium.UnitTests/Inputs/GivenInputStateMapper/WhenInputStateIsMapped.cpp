@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "Inputs/InputStateMapper.h"
+#include "Crymium/Inputs/InputStateMapper.h"
 
 namespace Crymium::UnitTests::Inputs::GivenInputStateMapper
 {

@@ -8,11 +8,11 @@ namespace Crymium::Browsers
 		: public IWindowInfoCreator
 	{
 	public:
-		WindowInfoCreator(
+		__declspec(dllexport) WindowInfoCreator(
 			ICrymiumRenderer* crymiumRenderer
 		);
 
-		std::unique_ptr<CefWindowInfo> Create() override;
+		__declspec(dllexport) std::unique_ptr<CefWindowInfo> Create() override;
 
 	private:
 		ICrymiumRenderer* _crymiumRenderer;

@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
 #include "gmock/gmock.h"
-#include "Textures/Mocks/MockTextureCreator.h"
-#include "Textures/Mocks/MockTextureDrawer.h"
-#include "Textures/TextureRenderer.h"
+#include "Crymium.UnitTests/Textures/Mocks/MockTextureCreator.h"
+#include "Crymium.UnitTests/Textures/Mocks/MockTextureDrawer.h"
+#include "Crymium/Textures/TextureRenderer.h"
 
 namespace Crymium::UnitTests::Textures::GivenTextureRenderer
 {

@@ -8,14 +8,14 @@ namespace Crymium::Cef
 		public ICrymiumCefRectSettings
 	{
 	public:
-		CrymiumCefRectSettings(
+		__declspec(dllexport) CrymiumCefRectSettings(
 			int x,
 			int y
 		);
 
-		int GetX() override;
+		__declspec(dllexport) int GetX() override;
 
-		int GetY() override;
+		__declspec(dllexport) int GetY() override;
 
 	private:
 		int x_;

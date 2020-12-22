@@ -9,11 +9,11 @@ namespace Crymium::Cef
 		public IInputEventListener
 	{
 	public:
-		CefInputEventListener(
+		__declspec(dllexport) CefInputEventListener(
 			ICrymiumContainer* crymiumContainer
 		);
 
-		bool OnInputEvent(const SInputEvent& event) override;
+		__declspec(dllexport) bool OnInputEvent(const SInputEvent& event) override;
 
 	private:
 		ICrymiumContainer* _crymiumContainer;

@@ -8,11 +8,11 @@ namespace Crymium::Cef
         : public ICrymiumCefSettingsCreator
     {
     public:
-        CrymiumCefSettingsCreator(
+        __declspec(dllexport) CrymiumCefSettingsCreator(
 			ICrymiumCefSettings* crymiumCefSettings
         );
 
-    	CefSettings Create() override;
+        __declspec(dllexport) CefSettings Create() override;
 
     private:
         ICrymiumCefSettings* _crymiumCefSettings;

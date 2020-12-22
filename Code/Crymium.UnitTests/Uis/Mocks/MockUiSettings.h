@@ -1,6 +1,6 @@
 #pragma once
 #include "gmock/gmock.h"
-#include "Uis/Core/IUiSettings.h"
+#include "Crymium/Uis/Core/IUiSettings.h"
 
 namespace Crymium::UnitTests::Uis::Mocks
 {

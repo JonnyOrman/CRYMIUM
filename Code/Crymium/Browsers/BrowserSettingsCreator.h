@@ -7,9 +7,9 @@ namespace Crymium::Browsers
 		: public IBrowserSettingsCreator
 	{
 	public:
-		BrowserSettingsCreator() = default;
+		__declspec(dllexport) BrowserSettingsCreator() = default;
 
-		CefBrowserSettings Create() override;
+		__declspec(dllexport) CefBrowserSettings Create() override;
 	};
 }
 

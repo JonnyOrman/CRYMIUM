@@ -1,6 +1,6 @@
 #pragma once
 #include "gmock/gmock.h"
-#include "Uis/Core/IUiPathResolver.h"
+#include "Crymium/Uis/Core/IUiPathResolver.h"
 
 namespace Crymium::UnitTests::Uis::Mocks
 {

@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "Inputs/KeyIdMapper.h"
+#include "Crymium/Inputs/KeyIdMapper.h"
 
 namespace Crymium::UnitTests::Inputs::GivenKeyIdMapper
 {

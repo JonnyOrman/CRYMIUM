@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include "gmock/gmock.h"
-#include "Textures/TextureProvider.h"
+#include "Crymium/Textures/TextureProvider.h"
 
 namespace Crymium::UnitTests::Textures::GivenTextureProvider
 {

@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include "gmock/gmock.h"
-#include "Rendering/Mocks/MockRendererSettings.h"
-#include "Textures/TextureSettings.h"
+#include "Crymium.UnitTests/Rendering/Mocks/MockRendererSettings.h"
+#include "Crymium/Textures/TextureSettings.h"
 
 namespace Crymium::UnitTests::Textures::GivenTextureSettings
 {

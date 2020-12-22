@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
-#include "Buffer/BufferProvider.h"
-#include "Buffer/BufferRenderHandler.h"
-#include "Buffer/Mocks/MockBufferSizeProvider.h"
+#include "Crymium/Buffer/BufferProvider.h"
+#include "Crymium/Buffer/BufferRenderHandler.h"
+#include "Crymium.UnitTests/Buffer/Mocks/MockBufferSizeProvider.h"
 
 namespace Crymium::UnitTests::Buffer::GivenBufferProvider
 {

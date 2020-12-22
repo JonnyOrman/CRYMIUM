@@ -1,6 +1,6 @@
 #pragma once
 #include "gmock/gmock.h"
-#include "Browsers/Core/IBrowser.h"
+#include "Crymium/Browsers/Core/IBrowser.h"
 
 namespace Crymium::UnitTests::Browsers::Mocks
 {

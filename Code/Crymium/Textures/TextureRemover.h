@@ -10,12 +10,12 @@ namespace Crymium::Textures
 		public ITextureRemover
 	{
 	public:
-		TextureRemover(
+		__declspec(dllexport) TextureRemover(
 			ITextureProvider* textureProvider,
 			ICrymiumRenderer* crymiumRenderer
 		);
 
-		void Remove() override;
+		__declspec(dllexport) void Remove() override;
 
 	private:
 		ITextureProvider* _textureProvider;

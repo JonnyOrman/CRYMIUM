@@ -12,7 +12,7 @@
 #include "Crymium/Cef/Core/ICrymiumCefInitialiser.h"
 #include "Crymium/Cry/Core/ICryInitialiser.h"
 #include "Crymium/Cef/Core/ICefMessageHandler.h"
-#include "Crymium/Core/IInitialiser.h"
+#include "Crymium/Core/ICrymiumInitialiser.h"
 #include "Crymium/Cef/Core/ICefInitialiser.h"
 #include "Crymium/Rendering/Core/IRendererSettings.h"
 #include "Crymium/Rendering/Core/IRendererProvider.h"

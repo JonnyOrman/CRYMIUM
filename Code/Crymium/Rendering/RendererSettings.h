@@ -9,13 +9,13 @@ namespace Crymium
 		public IRendererSettings
 	{
 	public:
-		RendererSettings(
+		__declspec(dllexport) RendererSettings(
 			IRendererProvider* rendererProvider
 		);
 
-		int GetWidth() override;
+		__declspec(dllexport) int GetWidth() override;
 
-		int GetHeight() override;
+		__declspec(dllexport) int GetHeight() override;
 
 	private:
 		IRendererProvider* _rendererProvider;

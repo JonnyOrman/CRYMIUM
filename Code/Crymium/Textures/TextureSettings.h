@@ -9,7 +9,7 @@ namespace Crymium::Textures
 		public ITextureSettings
 	{
 	public:
-		TextureSettings(
+		__declspec(dllexport) TextureSettings(
 			const char* name,
 			int numberOfMips,
 			int flags,
@@ -17,17 +17,17 @@ namespace Crymium::Textures
 			IRendererSettings* renderSettings
 		);
 
-		const char* GetName() override;
+		__declspec(dllexport) const char* GetName() override;
 
-		int GetNumberOfMips() override;
+		__declspec(dllexport) int GetNumberOfMips() override;
 
-		int GetFlags() override;
+		__declspec(dllexport) int GetFlags() override;
 
-		ETEX_Format GetEtexFormat() override;
+		__declspec(dllexport) ETEX_Format GetEtexFormat() override;
 
-		int GetWidth() override;
+		__declspec(dllexport) int GetWidth() override;
 
-		int GetHeight() override;
+		__declspec(dllexport) int GetHeight() override;
 		
 	private:
 		const char* _name;

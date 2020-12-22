@@ -10,12 +10,12 @@ namespace Crymium::Textures
 		public ITextureRenderer
 	{
 	public:
-		TextureRenderer(
+		__declspec(dllexport) TextureRenderer(
 			ITextureCreator* textureCreator,
 			ITextureDrawer* textureDrawer
 		);
 
-		void Render() override;
+		__declspec(dllexport) void Render() override;
 
 	private:
 		ITextureCreator* _textureCreator;

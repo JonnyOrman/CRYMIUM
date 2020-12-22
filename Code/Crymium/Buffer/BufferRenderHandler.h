@@ -10,20 +10,26 @@ namespace Crymium::Buffer
     class BufferRenderHandler : public CefRenderHandler
     {
     public:
-        BufferRenderHandler(
-            IRendererSettings* rendererSettings,
+        __declspec(dllexport) BufferRenderHandler(
             ICrymiumCefRectSettings* cefRectSettings,
+            IRendererSettings* rendererSettings,
             IBufferProvider* bufferProvider
         );
 
-        void GetViewRect(CefRefPtr<CefBrowser> browser, CefRect& rect) override;
+        __declspec(dllexport) void GetViewRect(CefRefPtr<CefBrowser> browser, CefRect& rect) override;
 
-        void OnPaint(CefRefPtr<CefBrowser> browser, PaintElementType type, const RectList& dirtyRects,
-            const void* buffer, int width, int height) override;
+        __declspec(dllexport) void OnPaint(
+            CefRefPtr<CefBrowser> browser, 
+            PaintElementType type, 
+            const RectList& dirtyRects,
+            const void* buffer,
+            int width,
+            int height
+        ) override;
 
     private:
-        IRendererSettings* _rendererSettings;
         ICrymiumCefRectSettings* _cefRectSettings;
+        IRendererSettings* _rendererSettings;
         IBufferProvider* _bufferProvider;
 
     public:

@@ -1,10 +1,10 @@
 //#include <CrySchematyc/Env/IEnvElement.h>
 #include <gtest/gtest.h>
-#include "Cry/Mocks/MockInput.h"
-#include "Cry/Mocks/MockSystemGlobalEnvironment.h"
+#include "Crymium.UnitTests/Cry/Mocks/MockInput.h"
+#include "Crymium.UnitTests/Cry/Mocks/MockSystemGlobalEnvironment.h"
 #include "gmock/gmock.h"
-#include "Inputs/InputInitialiser.h"
-#include "Inputs/Mocks/MockInputEventListener.h"
+#include "Crymium/Inputs/InputInitialiser.h"
+#include "Crymium.UnitTests/Inputs/Mocks/MockInputEventListener.h"
 
 namespace Crymium::UnitTests::Inputs::GivenInputInitialiser
 {

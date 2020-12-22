@@ -1,6 +1,6 @@
 #pragma once
 #include "gmock/gmock.h"
-#include "Rendering/Core/ICrymiumRenderer.h"
+#include "Crymium/Rendering/Core/ICrymiumRenderer.h"
 
 namespace Crymium::UnitTests::Rendering::Mocks
 {

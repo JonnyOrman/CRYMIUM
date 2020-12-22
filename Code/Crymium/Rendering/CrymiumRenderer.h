@@ -8,9 +8,9 @@ namespace Crymium::Rendering
 		public ICrymiumRenderer
 	{
 	public:
-		CrymiumRenderer() = default;
+		__declspec(dllexport) CrymiumRenderer() = default;
 
-		ITexture* CreateTexture(
+		__declspec(dllexport) ITexture* CreateTexture(
 			const char* name, 
 			int width, 
 			int height, 
@@ -20,11 +20,11 @@ namespace Crymium::Rendering
 			int flags
 		) override;
 
-		CRY_HWND GetHWND() override;
+		__declspec(dllexport) CRY_HWND GetHWND() override;
 
-		void RegisterCaptureFrame(ICaptureFrameListener* captureFrameListener) override;
+		__declspec(dllexport) void RegisterCaptureFrame(ICaptureFrameListener* captureFrameListener) override;
 
-		void RemoveTexture(int textureId) override;
+		__declspec(dllexport) void RemoveTexture(int textureId) override;
 	};
 }
 

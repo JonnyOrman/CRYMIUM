@@ -9,12 +9,12 @@ namespace Crymium::Uis
 		: public IUiActivator
 	{
 	public:
-		UiActivator(
+		__declspec(dllexport) UiActivator(
 			IUiPathResolver* uiPathResolver,
 			IBrowser* browser
 		);
 
-		void Activate(const char* uiName) override;
+		__declspec(dllexport) void Activate(const char* uiName) override;
 
 	private:
 		IUiPathResolver* _uiPathResolver;

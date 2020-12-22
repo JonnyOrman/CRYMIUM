@@ -10,12 +10,12 @@ namespace Crymium::Textures
 		public ITextureUpdater
 	{
 	public:
-		TextureUpdater(
+		__declspec(dllexport) TextureUpdater(
 			ITextureRemover* textureRemover,
 			ITextureRenderer* textureRenderer
 		);
 
-		void UpdateTexture() override;
+		__declspec(dllexport) void UpdateTexture() override;
 
 	private:
 		ITextureRemover* _textureRemover;

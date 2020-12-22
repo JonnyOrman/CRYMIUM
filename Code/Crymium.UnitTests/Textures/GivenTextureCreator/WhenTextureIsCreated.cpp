@@ -1,11 +1,11 @@
 #include <gtest/gtest.h>
-#include "Buffer/Mocks/MockBufferProvider.h"
-#include "Cry/Mocks/MockTexture.h"
+#include "Crymium.UnitTests/Buffer/Mocks/MockBufferProvider.h"
+#include "Crymium.UnitTests/Cry/Mocks/MockTexture.h"
 #include "gmock/gmock.h"
-#include "Rendering/Mocks/MockCrymiumRenderer.h"
-#include "Textures/Mocks/MockTextureProvider.h"
-#include "Textures/Mocks/MockTextureSettings.h"
-#include "Textures/TextureCreator.h"
+#include "Crymium.UnitTests/Rendering/Mocks/MockCrymiumRenderer.h"
+#include "Crymium.UnitTests/Textures/Mocks/MockTextureProvider.h"
+#include "Crymium.UnitTests/Textures/Mocks/MockTextureSettings.h"
+#include "Crymium/Textures/TextureCreator.h"
 
 namespace Crymium::UnitTests::Textures::GivenTextureCreator
 {

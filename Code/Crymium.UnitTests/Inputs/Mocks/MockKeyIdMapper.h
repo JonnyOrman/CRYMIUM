@@ -1,6 +1,6 @@
 #pragma once
 #include "gmock/gmock.h"
-#include "Inputs/Core/IKeyIdMapper.h"
+#include "Crymium/Inputs/Core/IKeyIdMapper.h"
 
 namespace Crymium::UnitTests::Inputs::Mocks
 {

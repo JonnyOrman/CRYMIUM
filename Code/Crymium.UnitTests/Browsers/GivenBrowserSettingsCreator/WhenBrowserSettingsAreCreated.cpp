@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "Browsers/BrowserSettingsCreator.h"
+#include "Crymium/Browsers/BrowserSettingsCreator.h"
 
 namespace Crymium::UnitTests::Browsers::GivenBrowserSettingsCreator
 {

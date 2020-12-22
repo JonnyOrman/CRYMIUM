@@ -9,19 +9,19 @@ namespace Crymium::Cef
 		public ICaptureFrameListener
 	{
 	public:
-		CrymiumCefCaptureFrameListener(
+		__declspec(dllexport) CrymiumCefCaptureFrameListener(
 			ITextureUpdater* textureUpdater
 		);
 
-		bool OnNeedFrameData(unsigned char*& pConvertedTextureBuf) override;
+		__declspec(dllexport) bool OnNeedFrameData(unsigned char*& pConvertedTextureBuf) override;
 
-		void OnFrameCaptured() override;
+		__declspec(dllexport) void OnFrameCaptured() override;
 
-		int OnGetFrameWidth() override;
+		__declspec(dllexport) int OnGetFrameWidth() override;
 
-		int OnGetFrameHeight() override;
+		__declspec(dllexport) int OnGetFrameHeight() override;
 
-		int OnCaptureFrameBegin(int* pTexHandle) override;
+		__declspec(dllexport) int OnCaptureFrameBegin(int* pTexHandle) override;
 
 	private:
 		ITextureUpdater* _textureUpdater;

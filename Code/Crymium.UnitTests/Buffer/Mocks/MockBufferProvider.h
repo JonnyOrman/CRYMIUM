@@ -1,5 +1,5 @@
 #pragma once
-#include "Buffer/Core/IBufferProvider.h"
+#include "Crymium/Buffer/Core/IBufferProvider.h"
 #include "gmock/gmock.h"
 
 namespace Crymium::UnitTests::Buffer::Mocks

@@ -9,13 +9,13 @@ namespace Crymium::Buffer
 		public IBufferProvider
 	{
 	public:
-		BufferProvider(
+		__declspec(dllexport) BufferProvider(
 			IBufferSizeProvider* bufferSizeProvider
 		);
 
-		void Set(const void* buffer) override;
+		__declspec(dllexport) void Set(const void* buffer) override;
 
-		unsigned char* Get() override;
+		__declspec(dllexport) unsigned char* Get() override;
 
 	private:
 		IBufferSizeProvider* _bufferSizeProvider;

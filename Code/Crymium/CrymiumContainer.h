@@ -9,129 +9,129 @@ namespace Crymium
 		public ICrymiumContainer
 	{
 	public:
-		CrymiumContainer() = default;
+		__declspec(dllexport) CrymiumContainer() = default;
 
-		void Register(std::unique_ptr<ICrymiumCefSettings> crymiumCefSettings) override;
-		ICrymiumCefSettings* GetCrymiumCefSettings() override;
+		__declspec(dllexport) void Register(std::unique_ptr<ICrymiumCefSettings> crymiumCefSettings) override;
+		__declspec(dllexport) ICrymiumCefSettings* GetCrymiumCefSettings() override;
 		
-		void Register(std::unique_ptr<ICrymiumCefAppInitialiser> cefInitialiser) override;
-		ICrymiumCefAppInitialiser* GetCrymiumCefAppInitialiser() override;
+		__declspec(dllexport) void Register(std::unique_ptr<ICrymiumCefAppInitialiser> cefInitialiser) override;
+		__declspec(dllexport) ICrymiumCefAppInitialiser* GetCrymiumCefAppInitialiser() override;
 
-		void Register(std::unique_ptr<ICaptureFrameListener> cefCaptureFrameListener) override;
-		ICaptureFrameListener* GetCrymiumCefCaptureFrameListener() override;
+		__declspec(dllexport) void Register(std::unique_ptr<ICaptureFrameListener> cefCaptureFrameListener) override;
+		__declspec(dllexport) ICaptureFrameListener* GetCrymiumCefCaptureFrameListener() override;
 		
-		void Register(std::unique_ptr<Crymium::Core::ICrymiumInitialiser> initialiser) override;
-		Crymium::Core::ICrymiumInitialiser* GetCrymiumInitialiser() override;
+		__declspec(dllexport) void Register(std::unique_ptr<Crymium::Core::ICrymiumInitialiser> initialiser) override;
+		__declspec(dllexport) Crymium::Core::ICrymiumInitialiser* GetCrymiumInitialiser() override;
 
-		void Register(std::unique_ptr<ITextureUpdater> textureUpdater) override;
-		ITextureUpdater* GetTextureUpdater() override;
+		__declspec(dllexport) void Register(std::unique_ptr<ITextureUpdater> textureUpdater) override;
+		__declspec(dllexport) ITextureUpdater* GetTextureUpdater() override;
 		
-		void Register(std::unique_ptr<IRendererSettings> renderSettings) override;
-		IRendererSettings* GetRendererSettings() override;
+		__declspec(dllexport) void Register(std::unique_ptr<IRendererSettings> renderSettings) override;
+		__declspec(dllexport) IRendererSettings* GetRendererSettings() override;
 
-		void Register(std::unique_ptr<IRendererProvider> rendererProvider) override;
-		IRendererProvider* GetRendererProvider() override;
+		__declspec(dllexport) void Register(std::unique_ptr<IRendererProvider> rendererProvider) override;
+		__declspec(dllexport) IRendererProvider* GetRendererProvider() override;
 
-		void Register(std::unique_ptr<IBufferSettings> bufferSettings) override;
-		IBufferSettings* GetBufferSettings() override;
+		__declspec(dllexport) void Register(std::unique_ptr<IBufferSettings> bufferSettings) override;
+		__declspec(dllexport) IBufferSettings* GetBufferSettings() override;
 
-		void Register(std::unique_ptr<ICrymiumCefRectSettings> cefRectSettings) override;
-		ICrymiumCefRectSettings* GetCrymiumCefRectSettings() override;
+		__declspec(dllexport) void Register(std::unique_ptr<ICrymiumCefRectSettings> cefRectSettings) override;
+		__declspec(dllexport) ICrymiumCefRectSettings* GetCrymiumCefRectSettings() override;
 
-		void Register(std::unique_ptr<IBufferProvider> bufferProvider) override;
-		IBufferProvider* GetBufferProvider() override;
+		__declspec(dllexport) void Register(std::unique_ptr<IBufferProvider> bufferProvider) override;
+		__declspec(dllexport) IBufferProvider* GetBufferProvider() override;
 
-		void Register(std::unique_ptr<ITextureSettings> textureSettings) override;
-		ITextureSettings* GetTextureSettings() override;
+		__declspec(dllexport) void Register(std::unique_ptr<ITextureSettings> textureSettings) override;
+		__declspec(dllexport) ITextureSettings* GetTextureSettings() override;
 
-		void Register(std::unique_ptr<IInputEventListener> cefInputEventListener) override;
-		IInputEventListener* GetCrymiumInputEventListener() override;
+		__declspec(dllexport) void Register(std::unique_ptr<IInputEventListener> cefInputEventListener) override;
+		__declspec(dllexport) IInputEventListener* GetCrymiumInputEventListener() override;
 
-		void Register(std::unique_ptr<ICrymiumCefInitialiser> crymiumCefInitialiser) override;
-		ICrymiumCefInitialiser* GetCrymiumCefInitialiser() override;
+		__declspec(dllexport) void Register(std::unique_ptr<ICrymiumCefInitialiser> crymiumCefInitialiser) override;
+		__declspec(dllexport) ICrymiumCefInitialiser* GetCrymiumCefInitialiser() override;
 
-		void Register(std::unique_ptr<ICryInitialiser> cryInitialiser) override;
-		ICryInitialiser* GetCryInitialiser() override;
+		__declspec(dllexport) void Register(std::unique_ptr<ICryInitialiser> cryInitialiser) override;
+		__declspec(dllexport) ICryInitialiser* GetCryInitialiser() override;
 
-		void Register(std::unique_ptr<IBrowser> crymiumBrowser) override;
-		IBrowser* GetBrowser() override;
+		__declspec(dllexport) void Register(std::unique_ptr<IBrowser> crymiumBrowser) override;
+		__declspec(dllexport) IBrowser* GetBrowser() override;
 
-		void Register(std::unique_ptr<IInputMapper> inputMapper) override;
-		IInputMapper* GetInputMapper() override;
+		__declspec(dllexport) void Register(std::unique_ptr<IInputMapper> inputMapper) override;
+		__declspec(dllexport) IInputMapper* GetInputMapper() override;
 
-		void Register(std::unique_ptr<IKeyIdMapper> keyIdMapper) override;
-		IKeyIdMapper* GetKeyIdMapper() override;
+		__declspec(dllexport) void Register(std::unique_ptr<IKeyIdMapper> keyIdMapper) override;
+		__declspec(dllexport) IKeyIdMapper* GetKeyIdMapper() override;
 
-		void Register(std::unique_ptr<IInputStateMapper> inputStateMapper) override;
-		IInputStateMapper* GetInputStateMapper() override;
+		__declspec(dllexport) void Register(std::unique_ptr<IInputStateMapper> inputStateMapper) override;
+		__declspec(dllexport) IInputStateMapper* GetInputStateMapper() override;
 
-		void Register(std::unique_ptr<IWindowInfoCreator> windowInfoCreator) override;
-		IWindowInfoCreator* GetWindowInfoCreator() override;
+		__declspec(dllexport) void Register(std::unique_ptr<IWindowInfoCreator> windowInfoCreator) override;
+		__declspec(dllexport) IWindowInfoCreator* GetWindowInfoCreator() override;
 
-		void Register(std::unique_ptr<IBrowserSettingsCreator> browserSettingsCreator) override;
-		IBrowserSettingsCreator* GetBrowserSettingsCreator() override;
+		__declspec(dllexport) void Register(std::unique_ptr<IBrowserSettingsCreator> browserSettingsCreator) override;
+		__declspec(dllexport) IBrowserSettingsCreator* GetBrowserSettingsCreator() override;
 
-		void Register(std::unique_ptr<ICrymiumCefSettingsCreator> crymiumCefSettingsCreator) override;
-		ICrymiumCefSettingsCreator* GetCrymiumCefSettingsCreator() override;
+		__declspec(dllexport) void Register(std::unique_ptr<ICrymiumCefSettingsCreator> crymiumCefSettingsCreator) override;
+		__declspec(dllexport) ICrymiumCefSettingsCreator* GetCrymiumCefSettingsCreator() override;
 
-		void Register(std::unique_ptr<ICrymiumCefMainArgsCreator> crymiumCefMainArgsCreator) override;
-		ICrymiumCefMainArgsCreator* GetCrymiumCefMainArgsCreator() override;
+		__declspec(dllexport) void Register(std::unique_ptr<ICrymiumCefMainArgsCreator> crymiumCefMainArgsCreator) override;
+		__declspec(dllexport) ICrymiumCefMainArgsCreator* GetCrymiumCefMainArgsCreator() override;
 
-		void Register(std::unique_ptr<ICrymiumSandboxInfoCreator> crymiumSandboxInfoCreator) override;
-		ICrymiumSandboxInfoCreator* GetCrymiumSandboxInfoCreator() override;
+		__declspec(dllexport) void Register(std::unique_ptr<ICrymiumSandboxInfoCreator> crymiumSandboxInfoCreator) override;
+		__declspec(dllexport) ICrymiumSandboxInfoCreator* GetCrymiumSandboxInfoCreator() override;
 
-		void Register(std::unique_ptr<IBufferSizeProvider> bufferSizeProvider) override;
-		IBufferSizeProvider* GetBufferSizeProvider() override;
+		__declspec(dllexport) void Register(std::unique_ptr<IBufferSizeProvider> bufferSizeProvider) override;
+		__declspec(dllexport) IBufferSizeProvider* GetBufferSizeProvider() override;
 
-		void Register(std::unique_ptr<ITextureRemover> textureRemover) override;
-		ITextureRemover* GetTextureRemover() override;
+		__declspec(dllexport) void Register(std::unique_ptr<ITextureRemover> textureRemover) override;
+		__declspec(dllexport) ITextureRemover* GetTextureRemover() override;
 
-		void Register(std::unique_ptr<ITextureDrawer> textureDrawer) override;
-		ITextureDrawer* GetTextureDrawer() override;
+		__declspec(dllexport) void Register(std::unique_ptr<ITextureDrawer> textureDrawer) override;
+		__declspec(dllexport) ITextureDrawer* GetTextureDrawer() override;
 
-		void Register(std::unique_ptr<ITextureRenderer> textureRenderer) override;
-		ITextureRenderer* GetTextureRenderer() override;
+		__declspec(dllexport) void Register(std::unique_ptr<ITextureRenderer> textureRenderer) override;
+		__declspec(dllexport) ITextureRenderer* GetTextureRenderer() override;
 
-		void Register(std::unique_ptr<ITextureCreator> textureCreator) override;
-		ITextureCreator* GetTextureCreator() override;
+		__declspec(dllexport) void Register(std::unique_ptr<ITextureCreator> textureCreator) override;
+		__declspec(dllexport) ITextureCreator* GetTextureCreator() override;
 
-		void Register(std::unique_ptr<ITextureProvider> textureProvider) override;
-		ITextureProvider* GetTextureProvider() override;
+		__declspec(dllexport) void Register(std::unique_ptr<ITextureProvider> textureProvider) override;
+		__declspec(dllexport) ITextureProvider* GetTextureProvider() override;
 
-		void Register(std::unique_ptr<ICrymiumRenderer> crymiumRenderer) override;
-		ICrymiumRenderer* GetCrymiumRenderer() override;
+		__declspec(dllexport) void Register(std::unique_ptr<ICrymiumRenderer> crymiumRenderer) override;
+		__declspec(dllexport) ICrymiumRenderer* GetCrymiumRenderer() override;
 
-		void Register(std::unique_ptr<ICrymiumRendererInitialiser> crymiumRendererInitialiser) override;
-		ICrymiumRendererInitialiser* GetCrymiumRendererInitialiser() override;
+		__declspec(dllexport) void Register(std::unique_ptr<ICrymiumRendererInitialiser> crymiumRendererInitialiser) override;
+		__declspec(dllexport) ICrymiumRendererInitialiser* GetCrymiumRendererInitialiser() override;
 
-		void Register(std::unique_ptr<IInputInitialiser> crymiumInputInitialiser) override;
-		IInputInitialiser* GetInputInitialiser() override;
+		__declspec(dllexport) void Register(std::unique_ptr<IInputInitialiser> crymiumInputInitialiser) override;
+		__declspec(dllexport) IInputInitialiser* GetInputInitialiser() override;
 
-		void Register(std::unique_ptr<IJavaScriptFunctionCallBuilder> javaScriptFunctionCallBuilder) override;
-		IJavaScriptFunctionCallBuilder* GetJavaScriptFunctionCallBuilder() override;
+		__declspec(dllexport) void Register(std::unique_ptr<IJavaScriptFunctionCallBuilder> javaScriptFunctionCallBuilder) override;
+		__declspec(dllexport) IJavaScriptFunctionCallBuilder* GetJavaScriptFunctionCallBuilder() override;
 
-		void Register(std::unique_ptr<IJavaScriptExecutor> javaScriptExecutor) override;
-		IJavaScriptExecutor* GetJavaScriptExecutor() override;
+		__declspec(dllexport) void Register(std::unique_ptr<IJavaScriptExecutor> javaScriptExecutor) override;
+		__declspec(dllexport) IJavaScriptExecutor* GetJavaScriptExecutor() override;
 
-		void Register(std::unique_ptr<IJavaScriptFunctionExecutor> javaScriptFunctionExecutor) override;
-		IJavaScriptFunctionExecutor* GetJavaScriptFunctionExecutor() override;
+		__declspec(dllexport) void Register(std::unique_ptr<IJavaScriptFunctionExecutor> javaScriptFunctionExecutor) override;
+		__declspec(dllexport) IJavaScriptFunctionExecutor* GetJavaScriptFunctionExecutor() override;
 
-		void Register(std::unique_ptr<Crymium::Uis::Core::IUiActivator> uiActivator) override;
-		Crymium::Uis::Core::IUiActivator* GetUiActivator() override;
+		__declspec(dllexport) void Register(std::unique_ptr<Crymium::Uis::Core::IUiActivator> uiActivator) override;
+		__declspec(dllexport) Crymium::Uis::Core::IUiActivator* GetUiActivator() override;
 
-		void Register(std::unique_ptr<Crymium::Uis::Core::IUiPathResolver> uiPathResolver) override;
-		Crymium::Uis::Core::IUiPathResolver* GetUiPathResolver() override;
+		__declspec(dllexport) void Register(std::unique_ptr<Crymium::Uis::Core::IUiPathResolver> uiPathResolver) override;
+		__declspec(dllexport) Crymium::Uis::Core::IUiPathResolver* GetUiPathResolver() override;
 
-		void Register(std::unique_ptr<Crymium::Uis::Core::IUiCloser> uiCloser) override;
-		Crymium::Uis::Core::IUiCloser* GetUiCloser() override;
+		__declspec(dllexport) void Register(std::unique_ptr<Crymium::Uis::Core::IUiCloser> uiCloser) override;
+		__declspec(dllexport) Crymium::Uis::Core::IUiCloser* GetUiCloser() override;
 
-		void Register(std::unique_ptr<Crymium::Uis::Core::IUiSettings> uiSettings) override;
-		Crymium::Uis::Core::IUiSettings* GetUiSettings() override;
+		__declspec(dllexport) void Register(std::unique_ptr<Crymium::Uis::Core::IUiSettings> uiSettings) override;
+		__declspec(dllexport) Crymium::Uis::Core::IUiSettings* GetUiSettings() override;
 		
-		void Set(ICefMessageHandler* cefMessageHandler) override;
+		__declspec(dllexport) void Set(ICefMessageHandler* cefMessageHandler) override;
 
-		void Register(std::unique_ptr<Crymium::Uis::Core::IUiDirectoryProvider> uiDirectoryProvider) override;
-		Crymium::Uis::Core::IUiDirectoryProvider* GetUiDirectoryProvider() override;
+		__declspec(dllexport) void Register(std::unique_ptr<Crymium::Uis::Core::IUiDirectoryProvider> uiDirectoryProvider) override;
+		__declspec(dllexport) Crymium::Uis::Core::IUiDirectoryProvider* GetUiDirectoryProvider() override;
 		
 	private:
 		std::unique_ptr<ICrymiumCefAppInitialiser> _cefInitialiser;

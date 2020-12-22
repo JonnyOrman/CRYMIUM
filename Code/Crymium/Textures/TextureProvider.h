@@ -8,20 +8,21 @@ namespace Crymium::Textures
 		public ITextureProvider
 	{
 	public:
-		TextureProvider() = default;
+		__declspec(dllexport) TextureProvider();
 
-		void Set(ITexture* texture) override;
+		__declspec(dllexport) void Set(ITexture* texture) override;
 
-		int GetTextureId() override;
+		__declspec(dllexport) int GetTextureId() override;
 
-		int GetTextureWidth() override;
+		__declspec(dllexport) int GetTextureWidth() override;
 
-		int GetTextureHeight() override;
+		__declspec(dllexport) int GetTextureHeight() override;
 
-		bool TextureExists() override;
+		__declspec(dllexport) bool TextureExists() override;
 
 	private:
 		ITexture* _texture;
+		int _defaultValue;
 	};
 }
 

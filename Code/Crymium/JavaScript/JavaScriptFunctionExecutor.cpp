@@ -10,7 +10,7 @@ _javaScriptExecutor(javaScriptExecutor)
 {
 }
 
-void JavaScriptFunctionExecutor::Execute(const char* functionName, std::vector<std::string> parameters)
+void JavaScriptFunctionExecutor::Execute(const char* functionName, const std::vector<std::string>& parameters)
 {
 	auto javaScriptString = _javaScriptFunctionCallBuilder->Build(functionName, parameters);
 

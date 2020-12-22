@@ -8,11 +8,11 @@ namespace Crymium::Buffer
 		public IBufferSettings
 	{
 	public:
-		BufferSettings(
+		__declspec(dllexport) BufferSettings(
 			int sizeMultiplier
 		);
 
-		int GetSizeMultiplier() override;
+		__declspec(dllexport) int GetSizeMultiplier() override;
 
 	private:
 		int _sizeMultiplier;

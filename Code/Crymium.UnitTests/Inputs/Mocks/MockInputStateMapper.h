@@ -1,6 +1,6 @@
 #pragma once
 #include "gmock/gmock.h"
-#include "Inputs/Core/IInputStateMapper.h"
+#include "Crymium/Inputs/Core/IInputStateMapper.h"
 
 namespace Crymium::UnitTests::Inputs::Mocks
 {

@@ -1,5 +1,12 @@
 #include "TextureProvider.h"
 
+TextureProvider::TextureProvider()
+	:
+_texture(nullptr),
+_defaultValue(-1)
+{
+}
+
 void TextureProvider::Set(ITexture* texture)
 {
 	_texture = texture;
@@ -7,17 +14,32 @@ void TextureProvider::Set(ITexture* texture)
 
 int TextureProvider::GetTextureId()
 {
-	return _texture->GetTextureID();
+	if (TextureExists())
+	{
+		return _texture->GetTextureID();
+	}
+
+	return _defaultValue;
 }
 
 int TextureProvider::GetTextureWidth()
 {
-	return _texture->GetWidth();
+	if (TextureExists())
+	{
+		return _texture->GetWidth();
+	}
+
+	return _defaultValue;
 }
 
 int TextureProvider::GetTextureHeight()
 {
-	return _texture->GetHeight();
+	if (TextureExists())
+	{
+		return _texture->GetHeight();
+	}
+
+	return _defaultValue;
 }
 
 bool TextureProvider::TextureExists()

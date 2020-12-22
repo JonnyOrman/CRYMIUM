@@ -10,13 +10,13 @@ namespace Crymium::Cef
 		: public ICrymiumCefAppInitialiser
 	{
 	public:
-		CrymiumCefAppInitialiser(
+		__declspec(dllexport) CrymiumCefAppInitialiser(
 			ICrymiumCefSettingsCreator* crymiumCefSettingsCreator,
 			ICrymiumCefMainArgsCreator* crymiumCefMainArgsCreator,
 			ICrymiumSandboxInfoCreator* crymiumSandboxInfoCreator
 		);
 
-		void Initialise() override;
+		__declspec(dllexport) void Initialise() override;
 
 	private:
 		ICrymiumCefSettingsCreator* _crymiumCefSettingsCreator;

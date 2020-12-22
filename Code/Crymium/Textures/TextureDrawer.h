@@ -9,11 +9,11 @@ namespace Crymium::Textures
 		public ITextureDrawer
 	{
 	public:
-		TextureDrawer(
+		__declspec(dllexport) TextureDrawer(
 			ITextureProvider* textureProvider
 		);
 
-		void Draw() override;
+		__declspec(dllexport) void Draw() override;
 
 	private:
 		ITextureProvider* _textureProvider;

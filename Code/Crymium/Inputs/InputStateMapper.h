@@ -7,9 +7,9 @@ namespace Crymium::Inputs::Core
 		: public IInputStateMapper
 	{
 	public:
-		InputStateMapper() = default;
+		__declspec(dllexport) InputStateMapper() = default;
 
-		cef_key_event_type_t Map(EInputState inputState) override;
+		__declspec(dllexport) cef_key_event_type_t Map(EInputState inputState) override;
 	};
 }
 

@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
-#include "Buffer/BufferRenderHandler.h"
-#include "Buffer/Mocks/MockBufferProvider.h"
+#include "Crymium/Buffer/BufferRenderHandler.h"
+#include "Crymium.UnitTests/Buffer/Mocks/MockBufferProvider.h"
 
 namespace Crymium::UnitTests::Buffer::GivenBufferRenderHandler
 {

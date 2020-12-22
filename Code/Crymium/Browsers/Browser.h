@@ -14,7 +14,7 @@ namespace Crymium::Browsers
 		: public IBrowser
 	{
 	public:
-		Browser(
+		__declspec(dllexport) Browser(
 			BufferRenderHandler* renderHandler,
 			IInputMapper* inputMapper,
 			IWindowInfoCreator* windowInfoCreator,
@@ -22,23 +22,23 @@ namespace Crymium::Browsers
 			IJavaScriptFunctionCallBuilder* javaScriptFunctionCallBuilder
 		);
 
-		void Initialise() override;
+		__declspec(dllexport) void Initialise() override;
 
-		void SendInputEvent(const SInputEvent& inputEvent) override;
+		__declspec(dllexport) void SendInputEvent(const SInputEvent& inputEvent) override;
 
-		void GoTo(std::string url) override;
+		__declspec(dllexport) void GoTo(std::string url) override;
 
-		void Set(ICefMessageHandler* cefMessageHandler) override;
+		__declspec(dllexport) void Set(ICefMessageHandler* cefMessageHandler) override;
 
-		void ExecuteJavaScriptString(const char* javaScript) override;
+		__declspec(dllexport) void ExecuteJavaScriptString(const char* javaScript) override;
 
-		void ExecuteJavaScriptFunction(const char* functionName, std::vector<std::string> parameters) override;
+		__declspec(dllexport) void ExecuteJavaScriptFunction(const char* functionName, std::vector<std::string> parameters) override;
 
-		bool IsReady() override;
+		__declspec(dllexport) bool IsReady() override;
 
-		void Update() override;
+		__declspec(dllexport) void Update() override;
 
-		std::string GetCurrentUrl() override;
+		__declspec(dllexport) std::string GetCurrentUrl() override;
 		
 	private:
 		CefRefPtr<CefBrowserClient> _browserClient;

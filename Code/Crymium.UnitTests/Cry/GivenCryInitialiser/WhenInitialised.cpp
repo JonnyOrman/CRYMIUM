@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
-#include "Cry/CryInitialiser.h"
+#include "Crymium/Cry/CryInitialiser.h"
 #include "gmock/gmock.h"
-#include "Inputs/Mocks/MockInputInitialiser.h"
-#include "Rendering/Mocks/MockCrymiumRendererInitialiser.h"
+#include "Crymium.UnitTests/Inputs/Mocks/MockInputInitialiser.h"
+#include "Crymium.UnitTests/Rendering/Mocks/MockCrymiumRendererInitialiser.h"
 
 namespace Crymium::UnitTests::Cry::GivenCryInitialiser
 {

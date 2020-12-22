@@ -12,14 +12,14 @@ namespace Crymium::Textures
 		public ITextureCreator
 	{
 	public:
-		TextureCreator(
+		__declspec(dllexport) TextureCreator(
 			ITextureSettings* textureSettings,
 			IBufferProvider* bufferProvider,
 			ITextureProvider* textureProvider,
 			ICrymiumRenderer* crymiumRenderer
 		);
 
-		void Create() override;
+		__declspec(dllexport) void Create() override;
 
 	private:
 		ITextureSettings* _textureSettings;

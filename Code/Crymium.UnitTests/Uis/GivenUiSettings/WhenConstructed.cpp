@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include "gmock/gmock.h"
-#include "Uis/UiSettings.h"
+#include "Crymium/Uis/UiSettings.h"
 
 namespace Crymium::UnitTests::Uis::GivenUiSettings
 {

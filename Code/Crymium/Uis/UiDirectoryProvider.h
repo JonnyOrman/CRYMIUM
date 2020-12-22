@@ -1,5 +1,5 @@
 #pragma once
-#include "Core/IUiDirectoryProvider.h"
+#include "Crymium/Uis/Core/IUiDirectoryProvider.h"
 
 namespace Crymium::Uis
 {
@@ -7,11 +7,11 @@ namespace Crymium::Uis
 		: public IUiDirectoryProvider
 	{
 	public:
-		UiDirectoryProvider(
+		__declspec(dllexport) UiDirectoryProvider(
 			std::string uiDirectory
 		);
 
-		std::string Get() override;
+		__declspec(dllexport) std::string Get() override;
 
 	private:
 		std::string _uiDirectory;

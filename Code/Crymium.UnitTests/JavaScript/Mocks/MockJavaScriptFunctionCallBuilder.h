@@ -1,6 +1,6 @@
 #pragma once
 #include "gmock/gmock.h"
-#include "JavaScript/Core/IJavaScriptFunctionCallBuilder.h"
+#include "Crymium/JavaScript/Core/IJavaScriptFunctionCallBuilder.h"
 
 namespace Crymium::UnitTests::JavaScript::Mocks
 {

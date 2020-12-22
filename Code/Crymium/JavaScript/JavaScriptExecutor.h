@@ -8,11 +8,11 @@ namespace Crymium::JavaScript
 		: public IJavaScriptExecutor
 	{
 	public:
-		JavaScriptExecutor(
+		__declspec(dllexport) JavaScriptExecutor(
 			IBrowser* crymiumBrowser
 		);
 
-		void Execute(const char* javaScript) override;
+		__declspec(dllexport) void Execute(const char* javaScript) override;
 
 	private:
 		IBrowser* _crymiumBrowser;

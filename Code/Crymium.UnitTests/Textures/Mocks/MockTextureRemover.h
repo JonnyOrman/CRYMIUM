@@ -1,6 +1,6 @@
 #pragma once
 #include "gmock/gmock.h"
-#include "Textures/Core/ITextureRemover.h"
+#include "Crymium/Textures/Core/ITextureRemover.h"
 
 namespace Crymium::UnitTests::Textures::Mocks
 {

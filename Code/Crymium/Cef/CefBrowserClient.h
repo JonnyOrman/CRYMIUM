@@ -12,24 +12,24 @@ namespace Crymium::Cef
         public CefLifeSpanHandler
     {
     public:
-        explicit CefBrowserClient(
+        __declspec(dllexport) explicit CefBrowserClient(
             BufferRenderHandler* renderHandler,
             CefRefPtr<CefMessageRouterBrowserSide> messageRouter,
             MessageHandler* messageHandler
         );
 
-        CefRefPtr<CefRenderHandler> GetRenderHandler() OVERRIDE;
+        __declspec(dllexport) CefRefPtr<CefRenderHandler> GetRenderHandler() OVERRIDE;
     	
-        CefRefPtr<CefLifeSpanHandler> GetLifeSpanHandler() OVERRIDE;
+        __declspec(dllexport) CefRefPtr<CefLifeSpanHandler> GetLifeSpanHandler() OVERRIDE;
     	
-        bool OnProcessMessageReceived(
+        __declspec(dllexport) bool OnProcessMessageReceived(
             CefRefPtr<CefBrowser> browser,
             CefRefPtr<CefFrame> frame,
             CefProcessId source_process,
             CefRefPtr<CefProcessMessage> message
         ) OVERRIDE;
 
-        void OnAfterCreated(CefRefPtr<CefBrowser> browser) OVERRIDE;
+        __declspec(dllexport) void OnAfterCreated(CefRefPtr<CefBrowser> browser) OVERRIDE;
     	
     private:
         CefRefPtr<CefMessageRouterBrowserSide> _messageRouter;

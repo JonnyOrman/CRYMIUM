@@ -7,9 +7,9 @@ namespace Crymium::Cef
         : public ICrymiumSandboxInfoCreator
     {
     public:
-        CrymiumSandboxInfoCreator() = default;
+        __declspec(dllexport) CrymiumSandboxInfoCreator() = default;
 
-    	void* Create() override;
+        __declspec(dllexport) void* Create() override;
     };
 }
 

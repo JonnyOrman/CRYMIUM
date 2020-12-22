@@ -7,9 +7,9 @@ namespace Crymium::Cef
         : public ICrymiumCefMainArgsCreator
     {
     public:
-        CrymiumCefMainArgsCreator() = default;
+        __declspec(dllexport) CrymiumCefMainArgsCreator() = default;
 
-        std::unique_ptr<CefMainArgs> Create() override;
+        __declspec(dllexport) std::unique_ptr<CefMainArgs> Create() override;
     };
 }
 

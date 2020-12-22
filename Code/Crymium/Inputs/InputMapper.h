@@ -9,12 +9,12 @@ namespace Crymium::Inputs::Core
 		: public IInputMapper
 	{
 	public:
-		InputMapper(
+		__declspec(dllexport) InputMapper(
 			IKeyIdMapper* keyIdMapper,
 			IInputStateMapper* inputStateMapper
 		);
 
-		CefKeyEvent Map(const SInputEvent& inputEvent) override;
+		__declspec(dllexport) CefKeyEvent Map(const SInputEvent& inputEvent) override;
 
 	private:
 		IKeyIdMapper* _keyIdMapper;

@@ -8,11 +8,11 @@ namespace Crymium::Uis
 		: public IUiCloser
 	{
 	public:
-		UiCloser(
+		__declspec(dllexport) UiCloser(
 			IBrowser* browser
 		);
 
-		void Close() override;
+		__declspec(dllexport) void Close() override;
 		
 	private:
 		IBrowser* _browser;

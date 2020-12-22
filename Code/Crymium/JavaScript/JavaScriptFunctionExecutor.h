@@ -9,12 +9,12 @@ namespace Crymium::JavaScript
 		: public IJavaScriptFunctionExecutor
 	{
 	public:
-		JavaScriptFunctionExecutor(
+		__declspec(dllexport) JavaScriptFunctionExecutor(
 			IJavaScriptFunctionCallBuilder* javaScriptFunctionCallBuilder,
 			IJavaScriptExecutor* javaScriptExecutor
 		);
 
-		void Execute(const char* functionName, std::vector<std::string> parameters) override;
+		__declspec(dllexport) void Execute(const char* functionName, const std::vector<std::string>& parameters) override;
 
 	private:
 		IJavaScriptFunctionCallBuilder* _javaScriptFunctionCallBuilder;

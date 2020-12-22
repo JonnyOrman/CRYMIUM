@@ -12,7 +12,7 @@ _browser(browser)
 
 void UiActivator::Activate(const char* uiName)
 {
-	auto uiPath = _uiPathResolver->Resolve(uiName);
+	const auto uiPath = _uiPathResolver->Resolve(uiName);
 	
 	_browser->GoTo(uiPath);
 }

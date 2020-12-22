@@ -7,14 +7,14 @@ namespace Crymium::Uis
 		: public IUiSettings
 	{
 	public:
-		UiSettings(
+		__declspec(dllexport) UiSettings(
 			std::string defaultFileName,
 			std::string defaultFileType
 		);
 
-		std::string GetDefaultFileName() override;
+		__declspec(dllexport) std::string GetDefaultFileName() override;
 
-		std::string GetDefaultFileType() override;
+		__declspec(dllexport) std::string GetDefaultFileType() override;
 		
 	private:
 		std::string _defaultFileName;

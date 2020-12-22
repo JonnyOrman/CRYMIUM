@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
 #include "gmock/gmock.h"
-#include "Textures/Mocks/MockTextureRemover.h"
-#include "Textures/Mocks/MockTextureRenderer.h"
-#include "Textures/TextureUpdater.h"
+#include "Crymium.UnitTests/Textures/Mocks/MockTextureRemover.h"
+#include "Crymium.UnitTests/Textures/Mocks/MockTextureRenderer.h"
+#include "Crymium/Textures/TextureUpdater.h"
 
 namespace Crymium::UnitTests::Textures::GivenTextureUpdater
 {

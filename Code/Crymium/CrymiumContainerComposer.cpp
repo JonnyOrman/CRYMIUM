@@ -1,54 +1,54 @@
 #include "CrymiumContainerComposer.h"
-#include "Browsers/Browser.h"
-#include "Browsers/BrowserSettingsCreator.h"
-#include "Browsers/WindowInfoCreator.h"
+#include "Crymium/Browsers/Browser.h"
+#include "Crymium/Browsers/BrowserSettingsCreator.h"
+#include "Crymium/Browsers/WindowInfoCreator.h"
 #include "CrymiumContainer.h"
 #include "CrymiumInitialiser.h"
-#include "Cef/CefCaptureFrameListener.h"
-#include "Rendering/RendererSettings.h"
-#include "Rendering/RendererProvider.h"
-#include "Buffer/BufferSettings.h"
-#include "Cef/CefRectSettings.h"
-#include "Buffer/BufferProvider.h"
-#include "Cef/CefInitialiser.h"
-#include "Buffer/BufferRenderHandler.h"
-#include "Buffer/BufferSizeProvider.h"
-#include "Cef/CefInputEventListener.h"
-#include "Cef/CrymiumCefInitialiser.h"
-#include "Cef/CrymiumCefMainArgsCreator.h"
-#include "Cef/CrymiumCefSettings.h"
-#include "Cef/CrymiumCefSettingsCreator.h"
-#include "Cef/CrymiumSandboxInfoCreator.h"
-#include "Cry/CryInitialiser.h"
-#include "Inputs/InputInitialiser.h"
-#include "Inputs/InputMapper.h"
-#include "Inputs/InputStateMapper.h"
-#include "Inputs/KeyIdMapper.h"
-#include "JavaScript/JavaScriptExecutor.h"
-#include "JavaScript/JavaScriptFunctionCallBuilder.h"
-#include "JavaScript/JavaScriptFunctionExecutor.h"
-#include "Rendering/CrymiumRenderer.h"
-#include "Rendering/CrymiumRendererInitialiser.h"
-#include "Textures/TextureUpdater.h"
-#include "Textures/TextureSettings.h"
-#include "Textures/TextureCreator.h"
-#include "Textures/TextureDrawer.h"
-#include "Textures/TextureProvider.h"
-#include "Textures/TextureRemover.h"
-#include "Textures/TextureRenderer.h"
-#include "Uis/UiActivator.h"
-#include "Uis/UiCloser.h"
-#include "Uis/UiPathResolver.h"
-#include "Uis/UiSettings.h"
-#include "Uis/CryUiDirectoryProvider.h"
-#include "Uis/UiDirectoryProvider.h"
+#include "Crymium/Cef/CefCaptureFrameListener.h"
+#include "Crymium/Rendering/RendererSettings.h"
+#include "Crymium/Rendering/RendererProvider.h"
+#include "Crymium/Buffer/BufferSettings.h"
+#include "Crymium/Cef/CefRectSettings.h"
+#include "Crymium/Buffer/BufferProvider.h"
+#include "Crymium/Cef/CefInitialiser.h"
+#include "Crymium/Buffer/BufferRenderHandler.h"
+#include "Crymium/Buffer/BufferSizeProvider.h"
+#include "Crymium/Cef/CefInputEventListener.h"
+#include "Crymium/Cef/CrymiumCefInitialiser.h"
+#include "Crymium/Cef/CrymiumCefMainArgsCreator.h"
+#include "Crymium/Cef/CrymiumCefSettings.h"
+#include "Crymium/Cef/CrymiumCefSettingsCreator.h"
+#include "Crymium/Cef/CrymiumSandboxInfoCreator.h"
+#include "Crymium/Cry/CryInitialiser.h"
+#include "Crymium/Inputs/InputInitialiser.h"
+#include "Crymium/Inputs/InputMapper.h"
+#include "Crymium/Inputs/InputStateMapper.h"
+#include "Crymium/Inputs/KeyIdMapper.h"
+#include "Crymium/JavaScript/JavaScriptExecutor.h"
+#include "Crymium/JavaScript/JavaScriptFunctionCallBuilder.h"
+#include "Crymium/JavaScript/JavaScriptFunctionExecutor.h"
+#include "Crymium/Rendering/CrymiumRenderer.h"
+#include "Crymium/Rendering/CrymiumRendererInitialiser.h"
+#include "Crymium/Textures/TextureUpdater.h"
+#include "Crymium/Textures/TextureSettings.h"
+#include "Crymium/Textures/TextureCreator.h"
+#include "Crymium/Textures/TextureDrawer.h"
+#include "Crymium/Textures/TextureProvider.h"
+#include "Crymium/Textures/TextureRemover.h"
+#include "Crymium/Textures/TextureRenderer.h"
+#include "Crymium/Uis/UiActivator.h"
+#include "Crymium/Uis/UiCloser.h"
+#include "Crymium/Uis/UiPathResolver.h"
+#include "Crymium/Uis/UiSettings.h"
+#include "Crymium/Uis/CryUiDirectoryProvider.h"
+#include "Crymium/Uis/UiDirectoryProvider.h"
 
 std::unique_ptr<ICrymiumContainer> CrymiumContainerComposer::Compose(std::string uiDirectory)
 {
 	auto container = std::make_unique<CrymiumContainer>();
 
 	container->Register(std::make_unique<CrymiumCefSettings>(
-		"C:/Program Files (x86)/Crytek/CRYENGINE Launcher/Crytek/CRYENGINE_5.6/bin/win_x64/Crymium.SubProcess.exe",
+		"Crymium.SubProcess.exe",
 		true,
 		LOGSEVERITY_WARNING,
 		8012,
@@ -63,6 +63,12 @@ std::unique_ptr<ICrymiumContainer> CrymiumContainerComposer::Compose(std::string
 
 	container->Register(std::make_unique<CrymiumSandboxInfoCreator>());
 	
+	container->Register(std::make_unique<CrymiumCefAppInitialiser>(
+		container->GetCrymiumCefSettingsCreator(),
+		container->GetCrymiumCefMainArgsCreator(),
+		container->GetCrymiumSandboxInfoCreator()
+		));
+
 	container->Register(std::make_unique<RendererProvider>());
 	
 	container->Register(std::make_unique<RendererSettings>(
@@ -88,8 +94,8 @@ std::unique_ptr<ICrymiumContainer> CrymiumContainerComposer::Compose(std::string
 		));
 	
 	auto cefRenderHandler = new BufferRenderHandler(
-		container->GetRendererSettings(),
 		container->GetCrymiumCefRectSettings(),
+		container->GetRendererSettings(),
 		container->GetBufferProvider()
 	);
 
@@ -176,12 +182,6 @@ std::unique_ptr<ICrymiumContainer> CrymiumContainerComposer::Compose(std::string
 
 	container->Register(std::make_unique<CefInputEventListener>(
 		container.get()
-		));
-
-	container->Register(std::make_unique<CrymiumCefAppInitialiser>(
-		container->GetCrymiumCefSettingsCreator(),
-		container->GetCrymiumCefMainArgsCreator(),
-		container->GetCrymiumSandboxInfoCreator()
 		));
 
 	container->Register(std::make_unique<CrymiumCefInitialiser>(

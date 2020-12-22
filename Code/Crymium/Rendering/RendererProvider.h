@@ -8,13 +8,13 @@ namespace Crymium::Rendering
 		public IRendererProvider
 	{
 	public:
-		RendererProvider() = default;
+		__declspec(dllexport) RendererProvider() = default;
 
-		IRenderer* Get() override;
+		__declspec(dllexport) IRenderer* Get() override;
 
-		int GetRendererWidth() override;
+		__declspec(dllexport) int GetRendererWidth() override;
 
-		int GetRendererHeight() override;
+		__declspec(dllexport) int GetRendererHeight() override;
 	};
 }
 

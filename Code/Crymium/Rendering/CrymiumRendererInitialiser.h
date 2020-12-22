@@ -9,12 +9,12 @@ namespace Crymium::Rendering
 		public ICrymiumRendererInitialiser
 	{
 	public:
-		CrymiumRendererInitialiser(
+		__declspec(dllexport) CrymiumRendererInitialiser(
 			ICrymiumRenderer* crymiumRenderer,
 			ICaptureFrameListener* captureFrameListener
 		);
 
-		void Initialise() override;
+		__declspec(dllexport) void Initialise() override;
 
 	private:
 		ICrymiumRenderer* _crymiumRenderer;

@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
-#include "Browsers/Mocks/MockBrowser.h"
+#include "Crymium.UnitTests/Browsers/Mocks/MockBrowser.h"
 #include "gmock/gmock.h"
-#include "Uis/Mocks/MockUiPathResolver.h"
-#include "Uis/UiActivator.h"
+#include "Crymium.UnitTests/Uis/Mocks/MockUiPathResolver.h"
+#include "Crymium/Uis/UiActivator.h"
 
 namespace Crymium::UnitTests::Uis::GivenUiActivator
 {

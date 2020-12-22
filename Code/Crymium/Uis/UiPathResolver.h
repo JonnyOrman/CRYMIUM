@@ -9,12 +9,12 @@ namespace Crymium::Uis
 		: public IUiPathResolver
 	{
 	public:
-		UiPathResolver(
+		__declspec(dllexport) UiPathResolver(
 			IUiSettings* uiSettings,
 			IUiDirectoryProvider* uiDirectoryProvider
 		);
 
-		std::string Resolve(std::string uiName) override;
+		__declspec(dllexport) std::string Resolve(std::string uiName) override;
 
 	private:
 		IUiSettings* _uiSettings;

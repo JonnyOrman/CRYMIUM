@@ -1,6 +1,6 @@
 #pragma once
 #include "gmock/gmock.h"
-#include "Inputs/Core/IInputInitialiser.h"
+#include "Crymium/Inputs/Core/IInputInitialiser.h"
 
 namespace Crymium::UnitTests::Inputs::Mocks
 {

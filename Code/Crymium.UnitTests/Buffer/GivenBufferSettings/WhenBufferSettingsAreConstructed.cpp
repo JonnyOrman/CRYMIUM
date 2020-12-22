@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "Buffer/BufferSettings.h"
+#include "Crymium/Buffer/BufferSettings.h"
 
 namespace Crymium::UnitTests::Buffer::GivenBufferSettings
 {

@@ -1,7 +1,7 @@
 #pragma once
 #include "Crymium/Cry/Core/ICryInitialiser.h"
-#include "Inputs/Core/IInputInitialiser.h"
-#include "Rendering/Core/ICrymiumRendererInitialiser.h"
+#include "Crymium/Inputs/Core/IInputInitialiser.h"
+#include "Crymium/Rendering/Core/ICrymiumRendererInitialiser.h"
 
 namespace Crymium::CryEngine
 {
@@ -9,16 +9,16 @@ namespace Crymium::CryEngine
 		: public ICryInitialiser
 	{
 	public:
-		CryInitialiser(
+		__declspec(dllexport) CryInitialiser(
 			ICrymiumRendererInitialiser* crymiumRendererInitialiser,
-			IInputInitialiser* crymiumInputInitialiser
+			IInputInitialiser* inputInitialiser
 		);
 
-		void Initialise() override;
+		__declspec(dllexport) void Initialise() override;
 
 	private:
 		ICrymiumRendererInitialiser* _crymiumRendererInitialiser;
-		IInputInitialiser* _crymiumInputInitialiser;
+		IInputInitialiser* _inputInitialiser;
 	};
 }
 

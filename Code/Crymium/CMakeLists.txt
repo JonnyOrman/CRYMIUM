@@ -102,7 +102,7 @@ add_sources("Core_uber.cpp"
     PROJECTS Crymium
     SOURCE_GROUP Core
         "Core/ICrymiumContainer.h"
-        "Core/IInitialiser.h"
+        "Core/ICrymiumInitialiser.h"
 )
 
 add_sources("Cry_uber.cpp"
@@ -271,5 +271,8 @@ set_target_properties(Crymium PROPERTIES
             CXX_STANDARD 17
             )
 
+
+target_compile_options(Crymium PRIVATE "/MTd")
+
 target_link_libraries(Crymium PUBLIC "../third_party/cef/cef_binary_79.1.27+gd2449e5+chromium-79.0.3945.117_windows64/Debug/libcef")
-target_link_libraries(Crymium PUBLIC "../libcef_dll_wrapper/Debug/libcef_dll_wrapper")
+target_link_libraries(Crymium PUBLIC libcef_dll_wrapper)

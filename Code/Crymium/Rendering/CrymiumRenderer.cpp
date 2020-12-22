@@ -1,4 +1,5 @@
 #include "CrymiumRenderer.h"
+#include <CryRenderer/IRenderer.h>
 
 ITexture* CrymiumRenderer::CreateTexture(
 	const char* name,

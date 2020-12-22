@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include "gmock/gmock.h"
-#include "JavaScript/JavaScriptExecutor.h"
-#include "Browsers/Mocks/MockBrowser.h"
+#include "Crymium/JavaScript/JavaScriptExecutor.h"
+#include "Crymium.UnitTests/Browsers/Mocks/MockBrowser.h"
 
 namespace Crymium::UnitTests::JavaScript::GivenJavaScriptExecutor
 {
