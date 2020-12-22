@@ -102,3 +102,8 @@ add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
 if (CMAKE_VERSION VERSION_LESS 2.8.11)
   include_directories("${gtest_SOURCE_DIR}/include")
 endif()
+
+target_compile_options(gtest PRIVATE "/MTd")
+target_compile_options(gtest_main PRIVATE "/MTd")
+target_compile_options(gmock PRIVATE "/MTd")
+target_compile_options(gmock_main PRIVATE "/MTd")

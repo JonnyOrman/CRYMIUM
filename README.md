@@ -1,6 +1,6 @@
 # CRYMIUM
 
-CRYMIUM is a plugin for CRYENGINE that allows you to use UIs made with web technologies in your games. It runs on the Chromium Embedded Framework.
+CRYMIUM is a plugin for CRYENGINE that allows you to use UIs made with web technologies (HTML, CSS, JavaScript) in your games. It runs on the Chromium Embedded Framework.
 
 It is still a work in progress and contributions are very welcome!
 
@@ -27,8 +27,7 @@ CRYMIUM consists of two parts: The renderer sub process and the plugin. We need 
 
 ### Build the CRYMIUM plugin and sub process
 
-- With the solution open in Visual Studio, find the "Crymium" project in the solution explorer, right click it and select "Build"
-- When the build is finished, find the "Crymium.SubProcess" project in the solution explorer, right click it and select "Build"
+- With the solution open in Visual Studio, select Build > Build Solution. Wait for the build to finish
 
 ## Installation
 
@@ -40,7 +39,7 @@ CRYMIUM consists of two parts: The renderer sub process and the plugin. We need 
 
 - In the newly created project's root directory right click the "Game.cryproject" file and select "Generate Solution"
 - Close the console window that opens. This will generate a CMakeLists.txt file in the project's Code directory
-- Open the newly created CMakeLists.txt file and look for the section where the include directories are added. It should look something like this:
+- Open the newly created Code/CMakeLists.txt file and look for the section where the include directories are added. It should look something like this:
 ```
 target_include_directories(${THIS_PROJECT}
 PRIVATE
@@ -83,10 +82,7 @@ CRYMIUM requires C++17 or higher. Let's modify our project to use C++17
 #BEGIN-CUSTOM
 # Make any custom changes here, modifications outside of the block will be discarded on regeneration.
 target_link_libraries(Game PUBLIC "C:/git/CRYMIUM/build/Crymium/Debug/Crymium.lib")
-
-set_target_properties(Game PROPERTIES
-            CXX_STANDARD 17
-            )
+set_target_properties(Game PROPERTIES CXX_STANDARD 17)
 #END-CUSTOM
 ```
 
@@ -149,7 +145,7 @@ Our CMake file should be ready now, so let's create the game solution.
 			{ "guid": "", "type": "EType::Native", "path": "CryDefaultEntities" },
 			{ "guid": "", "type": "EType::Native", "path": "CrySensorSystem" },
 			{ "guid": "", "type": "EType::Native", "path": "CryPerceptionSystem" },
-            { "guid": "", "type": "EType::Native", "path": "bin/win_x64/Crymium.dll" },
+			{ "guid": "", "type": "EType::Native", "path": "bin/win_x64/Crymium.dll" },
 			{ "guid": "", "type": "EType::Native", "path": "bin/win_x64/Game.dll" },
 			{
 				"guid": "",

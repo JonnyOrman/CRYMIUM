@@ -34,11 +34,14 @@ PRIVATE
 
 target_compile_definitions(${THIS_PROJECT} PRIVATE NOT_USE_CRY_MEMORY_MANAGER)
 
-set_target_properties(Crymium.UnitTests PROPERTIES
-            CXX_STANDARD 17
-            )
+set_target_properties(Crymium.UnitTests PROPERTIES CXX_STANDARD 17)
+
+target_compile_options(Crymium.UnitTests PRIVATE "/MTd")
 
 target_link_libraries(Crymium.UnitTests PUBLIC Crymium)
+target_link_libraries(Crymium.UnitTests PUBLIC gmock)
+target_link_libraries(Crymium.UnitTests PUBLIC gmock_main)
+target_link_libraries(Crymium.UnitTests PUBLIC gtest)
 target_link_libraries(Crymium.UnitTests PUBLIC gtest_main)
 
 SET(CMAKE_CXX_FLAGS "/EHsc")

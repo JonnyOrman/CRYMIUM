@@ -50,6 +50,4 @@ SET_CEF_TARGET_OUT_DIR()
   COPY_FILES("${CEF_TARGET}" "${CEF_BINARY_FILES}" "${CEF_BINARY_DIR}" "${CEF_TARGET_OUT_DIR}")
   COPY_FILES("${CEF_TARGET}" "${CEF_RESOURCE_FILES}" "${CEF_RESOURCE_DIR}" "${CEF_TARGET_OUT_DIR}")
 
-  set_target_properties(Crymium.SubProcess PROPERTIES
-            CXX_STANDARD 17
-            )
+  set_target_properties(Crymium.SubProcess PROPERTIES CXX_STANDARD 17)
