@@ -2,8 +2,6 @@
 
 CRYMIUM is a plugin for CRYENGINE that allows you to use UIs made with web technologies (HTML, CSS, JavaScript) in your games. It runs on the Chromium Embedded Framework.
 
-It is still a work in progress and contributions are very welcome!
-
 ## Building
 
 [How to build CRYMIUM](https://github.com/JonnyOrman/CRYMIUM/wiki/Building)

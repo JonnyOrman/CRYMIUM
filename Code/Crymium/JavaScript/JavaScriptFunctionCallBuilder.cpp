@@ -2,7 +2,7 @@
 
 std::string JavaScriptFunctionCallBuilder::Build(std::string functionName, const std::vector<std::string>& parameters)
 {
-	auto javaScriptString = std::string("window.angularComponentRef.zone.run(() => {window.angularComponentRef.component.") + functionName + "(";
+	auto javaScriptString = functionName + "(";
 
 	auto parameterCount = parameters.size();
 
@@ -22,7 +22,7 @@ std::string JavaScriptFunctionCallBuilder::Build(std::string functionName, const
 		}
 	}
 
-	javaScriptString += ");})";
+	javaScriptString += ");";
 
 	return javaScriptString;
 }
