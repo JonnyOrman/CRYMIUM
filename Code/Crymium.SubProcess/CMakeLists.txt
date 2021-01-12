@@ -5,8 +5,6 @@ set(SUBPROCESS_RENDERER_SRCS
   renderer/IDelegateCollection.h
   renderer/DelegateCollection.h
   renderer/DelegateCollection.cpp
-  renderer/V8Handler.cpp
-  renderer/V8Handler.h
   renderer/ClientAppRenderer.cpp
   renderer/ClientAppRenderer.h
   )
