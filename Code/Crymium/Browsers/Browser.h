@@ -19,7 +19,8 @@ namespace Crymium::Browsers
 			IInputMapper* inputMapper,
 			IWindowInfoCreator* windowInfoCreator,
 			IBrowserSettingsCreator* browserSettingsCreator,
-			IJavaScriptFunctionCallBuilder* javaScriptFunctionCallBuilder
+			IJavaScriptFunctionCallBuilder* javaScriptFunctionCallBuilder,
+			ICefMessageHandler* cefMessageHandler
 		);
 
 		__declspec(dllexport) void Initialise() override;
@@ -27,9 +28,7 @@ namespace Crymium::Browsers
 		__declspec(dllexport) void SendInputEvent(const SInputEvent& inputEvent) override;
 
 		__declspec(dllexport) void GoTo(std::string url) override;
-
-		__declspec(dllexport) void Set(ICefMessageHandler* cefMessageHandler) override;
-
+		
 		__declspec(dllexport) void ExecuteJavaScriptString(const char* javaScript) override;
 
 		__declspec(dllexport) void ExecuteJavaScriptFunction(const char* functionName, std::vector<std::string> parameters) override;

@@ -6,14 +6,16 @@ Browser::Browser(
     IInputMapper* inputMapper,
     IWindowInfoCreator* windowInfoCreator,
     IBrowserSettingsCreator* browserSettingsCreator,
-    IJavaScriptFunctionCallBuilder* javaScriptFunctionCallBuilder
+    IJavaScriptFunctionCallBuilder* javaScriptFunctionCallBuilder,
+    ICefMessageHandler* cefMessageHandler
 )
 :
 _renderHandler(renderHandler),
 _inputMapper(inputMapper),
 _windowInfoCreator(windowInfoCreator),
 _browserSettingsCreator(browserSettingsCreator),
-_javaScriptFunctionCallBuilder(javaScriptFunctionCallBuilder)
+_javaScriptFunctionCallBuilder(javaScriptFunctionCallBuilder),
+_cefMessageHandler(cefMessageHandler)
 {
 }
 
@@ -49,11 +51,6 @@ void Browser::SendInputEvent(const SInputEvent& inputEvent)
 void Browser::GoTo(std::string url)
 {
     _browser->GetMainFrame()->LoadURL(url);
-}
-
-void Browser::Set(ICefMessageHandler* cefMessageHandler)
-{
-    _cefMessageHandler = cefMessageHandler;
 }
 
 void Browser::ExecuteJavaScriptString(const char* javaScript)

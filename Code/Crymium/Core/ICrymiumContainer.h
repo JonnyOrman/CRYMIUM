@@ -3,6 +3,7 @@
 #include <CryInput/IInput.h>
 #include "Crymium/Cef/Core/ICrymiumCefSettings.h"
 #include "Crymium/Buffer/Core/IBufferSizeProvider.h"
+#include "Crymium/Cef/Core/ICefQueryHandler.h"
 #include "Crymium/Cef/Core/ICrymiumSandboxInfoCreator.h"
 #include "Crymium/Cef/Core/ICrymiumCefMainArgsCreator.h"
 #include "Crymium/Cef/Core/ICrymiumCefSettingsCreator.h"
@@ -167,7 +168,10 @@ namespace Crymium::Core
 		virtual void Register(std::unique_ptr<Crymium::Uis::Core::IUiDirectoryProvider> uiDirectoryProvider) = 0;
 		virtual Crymium::Uis::Core::IUiDirectoryProvider* GetUiDirectoryProvider() = 0;
 
-		virtual void Set(ICefMessageHandler* cefMessageHandler) = 0;
+		virtual void Register(std::unique_ptr<ICefMessageHandler> cefMessageHandler) = 0;
+		virtual ICefMessageHandler* GetCefMessageHandler() = 0;
+
+		virtual void Add(ICefQueryHandler* cefQueryHandler) = 0;
 	};
 }
 

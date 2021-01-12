@@ -290,11 +290,6 @@ ITextureProvider* CrymiumContainer::GetTextureProvider()
 	return _textureProvider.get();
 }
 
-void CrymiumContainer::Set(ICefMessageHandler* cefMessageHandler)
-{
-	GetBrowser()->Set(cefMessageHandler);
-}
-
 void CrymiumContainer::Register(std::unique_ptr<Crymium::Uis::Core::IUiDirectoryProvider> uiDirectoryProvider)
 {
 	_uiDirectoryProvider = std::move(uiDirectoryProvider);
@@ -303,6 +298,21 @@ void CrymiumContainer::Register(std::unique_ptr<Crymium::Uis::Core::IUiDirectory
 Crymium::Uis::Core::IUiDirectoryProvider* CrymiumContainer::GetUiDirectoryProvider()
 {
 	return _uiDirectoryProvider.get();
+}
+
+void CrymiumContainer::Register(std::unique_ptr<ICefMessageHandler> cefMessageHandler)
+{
+	_cefMessageHandler = std::move(cefMessageHandler);
+}
+
+ICefMessageHandler* CrymiumContainer::GetCefMessageHandler()
+{
+	return _cefMessageHandler.get();
+}
+
+void CrymiumContainer::Add(ICefQueryHandler* cefQueryHandler)
+{
+	GetCefMessageHandler()->AddCefQueryHandler(cefQueryHandler);
 }
 
 void CrymiumContainer::Register(std::unique_ptr<ICrymiumRenderer> crymiumRenderer)

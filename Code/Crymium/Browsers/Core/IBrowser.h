@@ -2,7 +2,6 @@
 #include <string>
 #include <vector>
 #include <CryInput/IInput.h>
-#include "Crymium/Cef/Core/ICefMessageHandler.h"
 
 namespace Crymium::Browsers::Core
 {
@@ -15,9 +14,7 @@ namespace Crymium::Browsers::Core
 		virtual void SendInputEvent(const SInputEvent& inputEvent) = 0;
 
 		virtual void GoTo(std::string url) = 0;
-
-		virtual void Set(ICefMessageHandler* cefMessageHandler) = 0; //TODO - find way to provide this before construction
-
+		
 		virtual void ExecuteJavaScriptString(const char* javaScript) = 0;
 
 		virtual void ExecuteJavaScriptFunction(const char* functionName, std::vector<std::string> parameters) = 0;

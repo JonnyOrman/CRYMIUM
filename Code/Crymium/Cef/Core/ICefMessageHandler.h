@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "ICefQueryHandler.h"
 
 namespace Crymium::Cef::Core
 {
@@ -7,7 +8,9 @@ namespace Crymium::Cef::Core
 	{
 		virtual ~ICefMessageHandler() = default;
 
-		virtual void Handle(std::string request) = 0;
+		virtual void Handle(const std::string& request) = 0;
+
+		virtual void AddCefQueryHandler(ICefQueryHandler* cefQueryHandler) = 0;
 	};
 }
 

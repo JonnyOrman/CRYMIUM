@@ -128,11 +128,14 @@ namespace Crymium
 		__declspec(dllexport) void Register(std::unique_ptr<Crymium::Uis::Core::IUiSettings> uiSettings) override;
 		__declspec(dllexport) Crymium::Uis::Core::IUiSettings* GetUiSettings() override;
 		
-		__declspec(dllexport) void Set(ICefMessageHandler* cefMessageHandler) override;
-
 		__declspec(dllexport) void Register(std::unique_ptr<Crymium::Uis::Core::IUiDirectoryProvider> uiDirectoryProvider) override;
 		__declspec(dllexport) Crymium::Uis::Core::IUiDirectoryProvider* GetUiDirectoryProvider() override;
+
+		__declspec(dllexport) void Register(std::unique_ptr<ICefMessageHandler> cefMessageHandler) override;
+		__declspec(dllexport) ICefMessageHandler* GetCefMessageHandler() override;
 		
+		__declspec(dllexport) void Add(ICefQueryHandler* cefQueryHandler) override;
+	
 	private:
 		std::unique_ptr<ICrymiumCefAppInitialiser> _cefInitialiser;
 		std::unique_ptr<ICaptureFrameListener> _cefCaptureFrameListener;
@@ -174,6 +177,7 @@ namespace Crymium
 		std::unique_ptr<Crymium::Uis::Core::IUiCloser> _uiCloser;
 		std::unique_ptr<Crymium::Uis::Core::IUiSettings> _uiSettings;
 		std::unique_ptr<Crymium::Uis::Core::IUiDirectoryProvider> _uiDirectoryProvider;
+		std::unique_ptr<ICefMessageHandler> _cefMessageHandler;
 	};
 }
 

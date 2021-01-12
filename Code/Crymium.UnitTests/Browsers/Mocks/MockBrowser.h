@@ -12,9 +12,7 @@ namespace Crymium::UnitTests::Browsers::Mocks
 		MOCK_METHOD(void, SendInputEvent, (const SInputEvent& inputEvent), (override));
 
 		MOCK_METHOD(void, GoTo, (std::string url), (override));
-
-		MOCK_METHOD(void, Set, (ICefMessageHandler* cefMessageHandler), (override));
-
+		
 		MOCK_METHOD(void, ExecuteJavaScriptString, (const char* javaScript), (override));
 
 		MOCK_METHOD(void, ExecuteJavaScriptFunction, (const char* functionName, std::vector<std::string> parameters), (override));

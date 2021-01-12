@@ -4,6 +4,7 @@
 #include "Crymium/Browsers/WindowInfoCreator.h"
 #include "CrymiumContainer.h"
 #include "CrymiumInitialiser.h"
+#include "Cef/CefMessageHandler.h"
 #include "Crymium/Cef/CefCaptureFrameListener.h"
 #include "Crymium/Rendering/RendererSettings.h"
 #include "Crymium/Rendering/RendererProvider.h"
@@ -117,13 +118,16 @@ std::unique_ptr<ICrymiumContainer> CrymiumContainerComposer::Compose(std::string
 	container->Register(std::make_unique<BrowserSettingsCreator>());
 
 	container->Register(std::make_unique<JavaScriptFunctionCallBuilder>());
+
+	container->Register(std::make_unique<CefMessageHandler>(std::vector<ICefQueryHandler*>()));
 	
 	container->Register(std::make_unique<Browser>(
 		cefRenderHandler,
 		container->GetInputMapper(),
 		container->GetWindowInfoCreator(),
 		container->GetBrowserSettingsCreator(),
-		container->GetJavaScriptFunctionCallBuilder()
+		container->GetJavaScriptFunctionCallBuilder(),
+		container->GetCefMessageHandler()
 		));
 
 	container->Register(std::make_unique<JavaScriptExecutor>(

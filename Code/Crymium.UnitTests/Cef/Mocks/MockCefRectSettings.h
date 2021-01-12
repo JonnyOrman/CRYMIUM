@@ -1,5 +1,5 @@
 #pragma once
-#include "Crymium/Cef/CefRectSettings.h"
+#include "Crymium/Cef/Core/ICefRectSettings.h"
 #include "gmock/gmock.h"
 
 namespace Crymium::UnitTests::Cef::Mocks
