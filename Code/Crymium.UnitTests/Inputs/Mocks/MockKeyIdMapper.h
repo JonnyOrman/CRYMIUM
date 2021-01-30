@@ -8,6 +8,8 @@ namespace Crymium::UnitTests::Inputs::Mocks
 	{
 	public:
 		MOCK_METHOD(int, Map, (EKeyId keyId), (override));
+
+		MOCK_METHOD(void, SetMapping, (EKeyId keyId, KeyCode keyCode), (override));
 	};
 }
 

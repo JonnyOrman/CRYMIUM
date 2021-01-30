@@ -21,10 +21,10 @@
 #include "Crymium/Cef/CrymiumCefSettingsCreator.h"
 #include "Crymium/Cef/CrymiumSandboxInfoCreator.h"
 #include "Crymium/Cry/CryInitialiser.h"
+#include "Crymium/Inputs/DefaultKeyIdMapperComposer.h"
 #include "Crymium/Inputs/InputInitialiser.h"
 #include "Crymium/Inputs/InputMapper.h"
 #include "Crymium/Inputs/InputStateMapper.h"
-#include "Crymium/Inputs/KeyIdMapper.h"
 #include "Crymium/JavaScript/JavaScriptExecutor.h"
 #include "Crymium/JavaScript/JavaScriptFunctionCallBuilder.h"
 #include "Crymium/JavaScript/JavaScriptFunctionExecutor.h"
@@ -99,9 +99,9 @@ std::unique_ptr<ICrymiumContainer> CrymiumContainerComposer::Compose(std::string
 		container->GetRendererSettings(),
 		container->GetBufferProvider()
 	);
-
-	container->Register(std::make_unique<KeyIdMapper>());
-
+	
+	container->Register(DefaultKeyIdMapperComposer::Compose());
+	
 	container->Register(std::make_unique<InputStateMapper>());
 	
 	container->Register(std::make_unique<InputMapper>(

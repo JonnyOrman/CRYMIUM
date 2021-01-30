@@ -125,13 +125,16 @@ add_sources("Cry_Core_uber.cpp"
 add_sources("Inputs_uber.cpp"
     PROJECTS Crymium
     SOURCE_GROUP Inputs
+        "Inputs/DefaultKeyIdMapperComposer.cpp"
         "Inputs/InputInitialiser.cpp"
 		"Inputs/InputMapper.cpp"
         "Inputs/InputStateMapper.cpp"
         "Inputs/KeyIdMapper.cpp"
+        "Inputs/DefaultKeyIdMapperComposer.h"
         "Inputs/InputInitialiser.h"
         "Inputs/InputMapper.h"
         "Inputs/InputStateMapper.h"
+        "Inputs/KeyCode.h"
         "Inputs/KeyIdMapper.h"
 )
 
