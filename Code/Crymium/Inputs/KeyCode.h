@@ -37,7 +37,7 @@ namespace Crymium::Inputs
 		Three = 51,
 		Four = 52,
 		Five = 53,
-		Size = 54,
+		Six = 54,
 		Seven = 55,
 		Eight = 56,
 		Nine = 57,
